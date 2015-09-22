@@ -1,0 +1,73 @@
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mental Help</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="searchBar">
+	                {{ Form::open(array('action' => 'CalendarEventsController@index', 'method' => 'get')) }}
+	                    {{ Form::text('search', null, ['class' => 'form-control search', 'placeholder' => 'Search...']) }}
+	                {{ Form::close() }}
+                </li>
+
+                @if(Auth::check())
+                    <li>
+                        <a href="#">
+                            {{{ Auth::user()->username }}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{{ action('CalendarEventsController@create')}}}">
+                            New Concert
+                        </a>
+                    </li>
+                @endif
+
+                @if(!Auth::check())
+                    <li>
+                        <a href="{{{ action('UsersController@create') }}}">
+                            Register
+                        </a>
+                    </li>
+                @endif
+
+                <li>
+                    <a href="{{{ action('CalendarEventsController@index')}}}">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{{ action('LocationsController@index')}}}">
+                        Venues
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{{ action('UsersController@index')}}}">
+                        Users
+                    </a>
+                </li>
+
+                @if(Auth::check())
+                    <li>
+                        <a href="{{{ action('HomeController@doLogout') }}}">
+                            Logout
+                        </a>
+                    </li>
+                @endif
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
