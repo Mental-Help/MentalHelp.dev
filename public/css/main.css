@@ -1,3 +1,18 @@
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; }
+
+.navbar-default {
+  background-image: linear-gradient(to bottom, #00A8E8 0, #00A8E8 100%); }
+
+.navbar-default .navbar-brand {
+  color: #fff; }
+
+.navbar-default
+.navbar-nav li a {
+  color: #fff; }
+
 /*caurousel*/
 .carousel-caption {
   position: relative;
