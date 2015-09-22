@@ -18,7 +18,7 @@
         @yield('style')
     </head>
     <body>
-        @include('layouts.partials.nav')
+
   
         <main>
             @yield('content')
