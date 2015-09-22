@@ -38,4 +38,12 @@
 .carousel-control.right {
   background-image: none; }
 
+/*image sizing*/
+.small {
+  height: 200px;
+  width: 200px; }
+
+section {
+  padding: 20px; }
+
 /*# sourceMappingURL=main.css.map */

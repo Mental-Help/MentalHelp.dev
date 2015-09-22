@@ -18,6 +18,7 @@
         @yield('style')
     </head>
     <body>
+
         @include('partials.navbar')
   
         <main>
