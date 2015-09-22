@@ -1,11 +1,12 @@
 <?php
 
+use Esensi\Model\SoftModel;
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends SoftModel implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
@@ -23,4 +24,18 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
+	protected $rules = array(
+		'email' 	 => 'required|email|max:255|unique:users',
+		'first_name' => 'required|max:255',
+		'last_name'  => 'required|max:255',
+		'password' 	 => 'required|confirmed',
+		'zip'     	 => 'required|numeric'
+	);
+
+	protected $hashable = [ 'password' ];
+
+	public function profile()
+	{
+		return $this->hasOne('Profile');
+	}
 }
