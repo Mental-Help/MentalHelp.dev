@@ -1,1 +1,0 @@
-# MentalHelp.dev
