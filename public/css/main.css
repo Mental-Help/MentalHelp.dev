@@ -14,7 +14,7 @@
 .navbar-default .navbar-nav li a {
   color: #fff; }
 
-/* CUSTOMIZE THE CAROUSEL
+/*CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
@@ -94,5 +94,7 @@
   .featurette-heading {
     margin-top: 120px; } }
 /*# sourceMappingURL=main.css.map*/
+hr {
+  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
