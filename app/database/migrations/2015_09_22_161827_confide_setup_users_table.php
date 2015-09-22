@@ -16,9 +16,6 @@ class ConfideSetupUsersTable extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
 
-            $table->string('street_address');
-            $table->string('city');
-            $table->string('state');
             $table->string('zip', 5);
 
             $table->string('password');

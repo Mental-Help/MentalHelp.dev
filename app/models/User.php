@@ -29,13 +29,13 @@ class User extends SoftModel implements UserInterface, RemindableInterface {
 		'first_name' => 'required|max:255',
 		'last_name'  => 'required|max:255',
 		'password' 	 => 'required|confirmed',
-		'address' 	 => 'required|max:255',
-		'city'    	 => 'required|max:255',
-		'state'   	 => 'required',
 		'zip'     	 => 'required|numeric'
 	);
 
 	protected $hashable = [ 'password' ];
 
-
+	public function profile()
+	{
+		return $this->hasOne('Profile');
+	}
 }
