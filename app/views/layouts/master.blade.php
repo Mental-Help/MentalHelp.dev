@@ -18,7 +18,7 @@
         @yield('style')
     </head>
     <body>
-        @include('layouts.partials.nav')
+        @include('partials.navbar')
   
         <main>
             @yield('content')
@@ -29,7 +29,6 @@
         <script type="text/javascript" src="/vendor/datetimepicker/jquery.datetimepicker.js"></script>
         <script type="text/javascript" src="/vendor/moment-timezone/moment-timezone.js"></script>
         <script type="text/javascript" src="/vendor/angular/angular.min.js"></script>
-        <script type="text/javascript" src="/js/event.js"></script>
         <script type="text/javascript" src="/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         @yield('script')
     </body>

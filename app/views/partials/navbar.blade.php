@@ -7,67 +7,66 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Mental Help</a>
+            <a class="navbar-brand" href="#">Mental Help</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="console dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mental Health<span class="caret"></span></a>
+                    <ul class="dropdown-menu scrollabel menu">
+                        <li><a href="#">Caregiver Info</a></li>
+                        <li><a href="#">Find Support Groups</a></li>
+                        <li><a href="#">Illness FAQs</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Veterans<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Families</a></li>
+                        <li><a href="#">Find Support Groups</a></li>
+                        <li><a href="#">Military Jargan</a></li>
+                        <li><a href="#">Post-Deployment</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recent Trauma<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Families & Caregivers</a></li>
+                        <li><a href="#">Find Support Groups</a></li>
+                        <li><a href="#">Medical Jargen</a></li>
+                        <li><a href="#">Post-Diagnosis</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caregivers<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Caring for Family</a></li>
+                        <li><a href="#">Find Support</a></li>
+                        <li><a href="#">Mental Illness FAQs</a></li>
+                        <li><a href="#">Medical Illness FAQs</a></li>
+                    </ul>
+                </li>
+            </ul>
+
             <ul class="nav navbar-nav navbar-right">
-                <li class="searchBar">
-	                {{ Form::open(array('action' => 'CalendarEventsController@index', 'method' => 'get')) }}
-	                    {{ Form::text('search', null, ['class' => 'form-control search', 'placeholder' => 'Search...']) }}
-	                {{ Form::close() }}
-                </li>
-
-                @if(Auth::check())
-                    <li>
-                        <a href="#">
-                            {{{ Auth::user()->username }}}
-                        </a>
+                @if (Auth::check())
+                    <li class="signin dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">My Groups</a></li>
+                            <li><a href="#">My Experiences</a></li>
+                            <li><a href="#">My Logout</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="{{{ action('CalendarEventsController@create')}}}">
-                            New Concert
-                        </a>
-                    </li>
-                @endif
-
-                @if(!Auth::check())
-                    <li>
-                        <a href="{{{ action('UsersController@create') }}}">
-                            Register
-                        </a>
-                    </li>
-                @endif
-
-                <li>
-                    <a href="{{{ action('CalendarEventsController@index')}}}">
-                        Events
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{{ action('LocationsController@index')}}}">
-                        Venues
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{{ action('UsersController@index')}}}">
-                        Users
-                    </a>
-                </li>
-
-                @if(Auth::check())
-                    <li>
-                        <a href="{{{ action('HomeController@doLogout') }}}">
-                            Logout
-                        </a>
-                    </li>
+                @else
+                    <li class="signin"><a class="navbar-user" href="#">Sign In</a><li>
+                    <li class="signup"><a class="navbar-user" href="#">Sign Up</a></li>
                 @endif
             </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+        </div> <!-- /.navbar-collapse -->
+    </div> <!-- /.container -->
 </nav>
