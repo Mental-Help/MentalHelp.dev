@@ -4,8 +4,82 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "91f867208eaf8d9a019ecb2ef595b06c",
+    "hash": "cafa04df6bcd97c40da020c06b2c13b7",
     "packages": [
+        {
+            "name": "bbatsche/entrust",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bbatsche/entrust.git",
+                "reference": "349e3449028f1d023e9c35a52b741b42f5c7fe41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bbatsche/entrust/zipball/349e3449028f1d023e9c35a52b741b42f5c7fe41",
+                "reference": "349e3449028f1d023e9c35a52b741b42f5c7fe41",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4.0",
+                "php": ">=5.4.0"
+            },
+            "replace": {
+                "zizaco/entrust": "1.*"
+            },
+            "require-dev": {
+                "illuminate/database": "~4.0",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "sami/sami": "2.0.*",
+                "symfony/process": "~2.3"
+            },
+            "suggest": {
+                "zizaco/confide": "Confide is an authentication solution for Laravel 4 that couples very well with Entrust"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/commands"
+                ],
+                "psr-4": {
+                    "Bbatsche\\Entrust\\": "src/Entrust/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Elkins",
+                    "homepage": "http://www.andrewelkins.com"
+                },
+                {
+                    "name": "Zizaco Zizuini",
+                    "email": "zizaco@gmail.com"
+                },
+                {
+                    "name": "Ben Batschelet",
+                    "homepage": "http://github.com/bbatsche"
+                }
+            ],
+            "description": "This package provides a flexible way to add Role-based Permissions to Laravel 4",
+            "keywords": [
+                "acl",
+                "auth",
+                "illuminate",
+                "laravel",
+                "permission",
+                "roles"
+            ],
+            "time": "2015-01-19 22:46:00"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "1.0.2",
@@ -1773,6 +1847,72 @@
                 "validation"
             ],
             "time": "2015-03-11 05:30:34"
+        },
+        {
+            "name": "zizaco/confide",
+            "version": "4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zizaco/confide.git",
+                "reference": "a5ba244073754ab9452c841e659e2bfe7abf3288"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zizaco/confide/zipball/a5ba244073754ab9452c841e659e2bfe7abf3288",
+                "reference": "a5ba244073754ab9452c841e659e2bfe7abf3288",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4.2|~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/auth": "~4.2",
+                "illuminate/console": "~4.2",
+                "illuminate/database": "~4.2",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "suggest": {
+                "zizaco/entrust": "add Role-based Permissions to Laravel 4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/migrations",
+                    "src/commands"
+                ],
+                "psr-4": {
+                    "Zizaco\\Confide\\": "src/Confide/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Elkins",
+                    "homepage": "http://www.andrewelkins.com"
+                },
+                {
+                    "name": "Zizaco Zizuini",
+                    "homepage": "http://www.zizaco.net"
+                }
+            ],
+            "description": "Confide is an authentication solution for Laravel 4",
+            "keywords": [
+                "auth",
+                "illuminate",
+                "laravel"
+            ],
+            "time": "2015-07-09 16:49:17"
         }
     ],
     "packages-dev": [
