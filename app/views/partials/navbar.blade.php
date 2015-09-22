@@ -15,16 +15,16 @@
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="console dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mental Health<span class="caret"></span></a>
-                    <ul class="dropdown-menu scrollabel menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mental Health</a>
+                    <ul class="dropdown-menu scrollable-menu">
                         <li><a href="#">Caregiver Info</a></li>
                         <li><a href="#">Find Support Groups</a></li>
                         <li><a href="#">Illness FAQs</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Veterans<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Veterans</a>
+                    <ul class="dropdown-menu scrollable-menu">
                         <li><a href="#">Families</a></li>
                         <li><a href="#">Find Support Groups</a></li>
                         <li><a href="#">Military Jargan</a></li>
@@ -32,17 +32,17 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recent Trauma<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recent Trauma</a>
+                    <ul class="dropdown-menu scrollable-menu">
                         <li><a href="#">Families & Caregivers</a></li>
                         <li><a href="#">Find Support Groups</a></li>
-                        <li><a href="#">Medical Jargen</a></li>
+                        <li><a href="#">Medical Jargan</a></li>
                         <li><a href="#">Post-Diagnosis</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caregivers<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caregivers</a>
+                    <ul class="dropdown-menu scrollable-menu">
                         <li><a href="#">Caring for Family</a></li>
                         <li><a href="#">Find Support</a></li>
                         <li><a href="#">Mental Illness FAQs</a></li>
@@ -54,7 +54,7 @@
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                     <li class="signin dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">My Profile</a></li>
                             <li><a href="#">My Groups</a></li>
@@ -63,8 +63,7 @@
                         </ul>
                     </li>
                 @else
-                    <li class="signin"><a class="navbar-user" href="#">Sign In</a><li>
-                    <li class="signup"><a class="navbar-user" href="#">Sign Up</a></li>
+                    <li class="signin"><a class="navbar-user" href="#">Login</a><li>
                 @endif
             </ul>
         </div> <!-- /.navbar-collapse -->
