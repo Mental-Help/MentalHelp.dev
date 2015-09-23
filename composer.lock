@@ -4,23 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cafa04df6bcd97c40da020c06b2c13b7",
+    "hash": "a98384c767bfcb6ddbfcf2bf5173f01d",
     "packages": [
         {
             "name": "bbatsche/entrust",
-            "version": "2.0.2",
+            "version": "2.1.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bbatsche/entrust.git",
-                "reference": "349e3449028f1d023e9c35a52b741b42f5c7fe41"
+                "reference": "340a076448a7611910ee6d97b2fbb32b37c87ff1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bbatsche/entrust/zipball/349e3449028f1d023e9c35a52b741b42f5c7fe41",
-                "reference": "349e3449028f1d023e9c35a52b741b42f5c7fe41",
+                "url": "https://api.github.com/repos/bbatsche/entrust/zipball/340a076448a7611910ee6d97b2fbb32b37c87ff1",
+                "reference": "340a076448a7611910ee6d97b2fbb32b37c87ff1",
                 "shasum": ""
             },
             "require": {
+                "illuminate/database": "~4.0",
+                "illuminate/http": "~4.0",
+                "illuminate/routing": "~4.0",
                 "illuminate/support": "~4.0",
                 "php": ">=5.4.0"
             },
@@ -28,11 +31,10 @@
                 "zizaco/entrust": "1.*"
             },
             "require-dev": {
-                "illuminate/database": "~4.0",
                 "mockery/mockery": "~0.9",
+                "nikic/php-parser": ">=1.0 <1.2",
                 "phpunit/phpunit": "~4.0",
-                "sami/sami": "2.0.*",
-                "symfony/process": "~2.3"
+                "sami/sami": "~3.0"
             },
             "suggest": {
                 "zizaco/confide": "Confide is an authentication solution for Laravel 4 that couples very well with Entrust"
@@ -73,12 +75,14 @@
             "keywords": [
                 "acl",
                 "auth",
+                "eloquent",
                 "illuminate",
                 "laravel",
                 "permission",
+                "rbac",
                 "roles"
             ],
-            "time": "2015-01-19 22:46:00"
+            "time": "2015-05-22 02:57:10"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -2799,6 +2803,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "bbatsche/entrust": 10,
         "fzaninotto/faker": 20
     },
     "prefer-stable": false,

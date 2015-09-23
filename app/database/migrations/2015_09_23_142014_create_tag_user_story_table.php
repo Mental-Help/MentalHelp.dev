@@ -15,7 +15,7 @@ class CreateTagUserStoryTable extends Migration {
 		Schema::create('tag_user_story', function(Blueprint $table)
 		{
 			$table->integer('tag_id')->unsigned()->index();
-			$table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+			$table->foreign('tag_id')->references('id')->on('tags');
 			$table->integer('user_story_id')->unsigned()->index();
 			$table->foreign('user_story_id')->references('id')->on('user_stories')->onDelete('cascade');
 		});

@@ -1,9 +1,10 @@
 <?php
 
+use Esensi\Model\Model;
 use Bbatsche\Entrust\Contracts\EntrustRoleInterface;
 use Bbatsche\Entrust\Traits\EntrustRoleTrait;
 
-class Role extends Eloquent implements EntrustRoleInterface
+class Role extends Model implements EntrustRoleInterface
 {
     use EntrustRoleTrait;
 }

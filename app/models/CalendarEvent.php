@@ -25,23 +25,23 @@ class CalendarEvent extends \SoftModel {
 		'location_id'     => 'required|numeric',
 	);
 
-	public function rsvpUser()
+	public function attendees()
 	{
 		return $this->belongsToMany('User', 'event_user', 'event_id', 'user_id');
 	}
 
-	public function eventLocation()
+	public function location()
 	{
-		return $this->hasOne('Location', 'locations', 'location_id');
+		return $this->hasOne('Location');
 	}
 
-	public function eventOwner()
+	public function owner()
 	{
 		return $this->hasOne('User', 'users', 'user_id');
 	}
 
-	public function eventTags()
+	public function tags()
 	{
-		return $this->belongsToMany('Tag', 'event_tag', 'event_id', 'tag_id');
+		return $this->belongsToMany('Tag');
 	}
 }

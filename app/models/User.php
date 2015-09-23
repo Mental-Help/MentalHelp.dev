@@ -39,12 +39,12 @@ class User extends SoftModel implements ConfideUserInterface, EntrustUserInterfa
 		return $this->hasOne('Profile');
 	}
 
-	public function rsvpCalendarEvents()
+	public function eventsAttending()
 	{
 		return $this->belongsToMany('CalendarEvent', 'event_user', 'user_id', 'event_id');
 	}
 
-	public function ownsCalendarEvent()
+	public function eventsCreated()
 	{
 		return $this->belongsTo('CalendarEvent', 'events', 'user_id');
 	}
