@@ -1,14 +1,14 @@
 <?php
 
 use Esensi\Model\SoftModel;
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
+use Zizaco\Confide\ConfideUser;
+use Zizaco\Confide\ConfideUserInterface;
+use Bbatsche\Entrust\Contracts\EntrustUserInterface;
+use Bbatsche\Entrust\Traits\EntrustUserTrait;
 
-class User extends SoftModel implements UserInterface, RemindableInterface {
+class User extends SoftModel implements ConfideUserInterface, EntrustUserInterface {
 
-	use UserTrait, RemindableTrait;
+	use ConfideUser, EntrustUserTrait;
 
 	/**
 	 * The database table used by the model.
@@ -39,8 +39,13 @@ class User extends SoftModel implements UserInterface, RemindableInterface {
 		return $this->hasOne('Profile');
 	}
 
-	public function rsvpCalendarEvents()
+	public function eventsAttending()
 	{
 		return $this->belongsToMany('CalendarEvent', 'event_user', 'user_id', 'event_id');
+	}
+
+	public function eventsCreated()
+	{
+		return $this->belongsTo('CalendarEvent', 'events', 'user_id');
 	}
 }
