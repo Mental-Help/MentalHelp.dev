@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateProfilesTable extends Migration {
+class CreateLocationsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,15 +12,17 @@ class CreateProfilesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('profiles', function(Blueprint $table)
+		Schema::create('locations', function(Blueprint $table)
 		{
 			$table->increments('id');
 
-			$table->text('about_me');
-			$table->string('username', 255);
-			$table->boolean('is_public');
-			$table->boolean('can_be_contacted');
-			$table->string('public_email')->nullable();
+			$table->string('street_address');
+			$table->string('city');
+			$table->string('state', 2);
+			$table->string('zip', 5);
+
+			$table->decimal('latitude');
+			$table->decimal('longitude');
 
 			$table->softDeletes();
 			$table->timestamps();
@@ -35,7 +37,7 @@ class CreateProfilesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('profiles');
+		Schema::drop('locations');
 	}
 
 }

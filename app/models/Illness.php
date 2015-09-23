@@ -14,7 +14,7 @@ class Illness extends \SoftModel {
 		'illness' => 'required|max:255'
 	);
 
-	public function profile()
+	public function profiles()
 	{
 		return $this->belongsToMany('Profile');
 	}
