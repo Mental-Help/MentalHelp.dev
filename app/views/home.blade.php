@@ -1,7 +1,5 @@
 @extends('layouts.master')
 
-@section('style')
-
 @section('content')
     <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
         <!-- Indicators -->
@@ -45,7 +43,8 @@
     <!-- Marketing messaging and featurettes ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
     <div class="container marketing">
-        <div clacc="mini-marketing">
+
+        <div class="mini-marketing">
         <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-4">
