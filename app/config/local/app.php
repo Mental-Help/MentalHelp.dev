@@ -19,5 +19,6 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
 	)),
+	'timezone' => 'UTC'
 
 );
