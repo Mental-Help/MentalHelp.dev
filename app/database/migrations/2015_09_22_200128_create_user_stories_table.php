@@ -18,7 +18,10 @@ class CreateUserStoriesTable extends Migration {
 
 			$table->string('title');
 			$table->text('body');
-			
+			$table->boolean('is_public');
+
+			$table->integer('profile_id')->unsigned();
+			$table->foreign('profile_id')->references('id')->on('profiles')->onDelete('cascade');
 
 			$table->softDeletes();
 			$table->timestamps();

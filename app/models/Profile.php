@@ -29,4 +29,9 @@ class Profile extends \SoftModel {
 	{
 		return $this->belongsToMany('Illness');
 	}
+
+	public function userStories()
+	{
+		return $this->hasMany('UserStory');
+	}
 }
