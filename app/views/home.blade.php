@@ -51,19 +51,19 @@
 		<div class="row">
 			<div class="col-lg-4">
 				<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<h2>Patient</h2>
+				<p>If you are signing up as a patient you will then be able to make a profile that includes your name, an "about me" section, your e-mail, and a place to share your story or keep track of progress that you have made. Caregivers, Professionals, and Patients will be able to contact you only after you have approved thier contact request. If you decline, you will never see it. You also have the option to have your profile set to private so that you can still write but only you would be able to see it. You have the ability to contact them as well.</p>
 				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 			</div><!-- /.col-lg-4 -->
 			<div class="col-lg-4">
 				<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-				<h2>Heading</h2>
-				<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+				<h2>Caregiver</h2>
+				<p>If you are signing up as a caregiver you will then be able to make a profile that includes an "about me" section, your name, e-mail, and a place to share stories about experiences you may have had when helping other people or whatever you'd like it to be. Caregivers, Professionals, and Patients will have the ability to contact you. You are able to reach out to them as well. You may scroll through other peoples profiles that are set to public.</p>
 				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 			</div><!-- /.col-lg-4 -->
 			<div class="col-lg-4">
 				<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-				<h2>Heading</h2>
+				<h2>Professional</h2>
 				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 			</div><!-- /.col-lg-4 -->
