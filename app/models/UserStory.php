@@ -8,13 +8,25 @@ class UserStory extends \SoftModel {
 	protected $fillable = [
 		'title',
 		'body',
-		'public',
+		'is_public',
 		'profile_id'
 	];
 
 	protected $rules = array(
-		'title' => 'required|max:255',
-		'body'	=> 'required',
-		''
+		'title' 	 => 'required|max:255',
+		'body'		 => 'required',
+		'is_public'  => 'required|boolean',
+		'profile_id' => 'required|numeric'
 	);
+
+	public function profile()
+	{
+		return $this->belongsTo('Profile');
+	}
+
+
+	public function tags()
+	{
+		return $this->belongsToMany('Tag');
+	}
 }
