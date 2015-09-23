@@ -38,4 +38,9 @@ class User extends SoftModel implements UserInterface, RemindableInterface {
 	{
 		return $this->hasOne('Profile');
 	}
+
+	public function rsvpCalendarEvents()
+	{
+		return $this->belongsToMany('CalendarEvent', 'event_user', 'user_id', 'event_id');
+	}
 }

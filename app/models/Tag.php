@@ -18,4 +18,9 @@ class Tag extends \SoftModel {
 	{
 		return $this->belongsToMany('UserStory');
 	}
+
+	public function calendarEvents()
+	{
+		return $this->belongsToMany('CalendarEvent');
+	}
 }
