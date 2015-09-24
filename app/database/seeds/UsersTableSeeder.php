@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder {
 			$user->password              = $password;
 			$user->password_confirmation = $password;
 			$user->confirmation_code	 = md5(uniqid(mt_rand(), true));
+			$user->confirmed			 = 1;
 
 			if ($user->isValid()) {
 				$user->save();
