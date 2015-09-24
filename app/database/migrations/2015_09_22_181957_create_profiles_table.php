@@ -29,6 +29,8 @@ class CreateProfilesTable extends Migration {
 			$table->string('twitter_url')->nullable()->unique();
 			$table->string('instagram_url')->nullable()->unique();
 
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
 			$table->softDeletes();
 			$table->timestamps();

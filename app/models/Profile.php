@@ -2,7 +2,7 @@
 
 	use Esensi\Model\SoftModel;
 
-class Profile extends \SoftModel {
+class Profile extends SoftModel {
 
 	protected $table = 'profiles';
 
@@ -15,7 +15,8 @@ class Profile extends \SoftModel {
 		'image_url',
 		'facebook_url',
 		'twitter_url',
-		'instagram_url'
+		'instagram_url',
+		'user_id'
 	];
 
 	protected $rules = array(
@@ -23,11 +24,12 @@ class Profile extends \SoftModel {
 		'username' 		   => 'required|max:255|unique:profiles',
 		'is_public'		   => 'required|boolean',
 		'can_be_contacted' => 'required|boolean',
-		'public_email'	   => 'required_if:can_be_contacted,true|email|max:255|unique:profiles'
+		'public_email'	   => 'required_if:can_be_contacted,true|email|max:255|unique:profiles',
 		'image_url'		   => 'required_if:is_public,true|max:255|unique:profiles',
 		'facebook_url'	   => 'url|max:255|unique:profiles',
 		'twitter_url'	   => 'url|max:255|unique:profiles',
-		'instagram_url'	   => 'url|max:255|unique:profiles'
+		'instagram_url'	   => 'url|max:255|unique:profiles',
+		'user_id'		   => 'required|numeric|unique:profiles'
 	);
 
 	public function user()

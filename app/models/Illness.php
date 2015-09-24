@@ -1,8 +1,8 @@
 <?php
 
-	use Esensi\Model\SoftModel;
+	use Esensi\Model\Model;
 
-class Illness extends \SoftModel {
+class Illness extends Model {
 
 	protected $table = 'illnesses';
 
