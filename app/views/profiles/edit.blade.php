@@ -39,19 +39,19 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <div class="about_me_div">
-                        {{Form::label('about_me_label', "About Me:")}}
+                    <div class="about-me-div">
+                        <h2>About Me:</h2>
                         <div>
                             {{Form::textarea('about_me', null, ['class' => 'form-control', 'placeholder' => 'About Me'])}}
                         </div>
                     </div>
 
-                    <div class="stories_div">
-                        {{Form::label('stories', "Stories:")}}
+                    <div class="stories-div">
+                        <h2>Stories:</h2>
                         <div>
                             <button class="btn btn-default">Add Story <i class="fa fa-plus-circle"></i></button>
                         </div>
-                        <div>
+                        <div class="individual-story well">
                             {{-- @foreach --}}
                             <h3>Title</h3>
                             <p><small>Date Created: </small></p>
@@ -61,8 +61,8 @@
                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <button class="btn btn-default">Edit <i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-default">Delete <i class="fa fa-trash-o"></i></button>
+                            <button class="btn btn-primary story-btn edit-btn">Edit <i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-danger story-btn delete-btn">Delete <i class="fa fa-trash-o"></i></button>
                         </div>
                     </div>
                 </div>
