@@ -19,14 +19,29 @@ class CalendarEvent extends \SoftModel {
 		'can_be_physical' => 'required|boolean',
 		'title'			  => 'required|max:255',
 		'description'	  => 'required|max:750',
-		'start_time'	  => 'required|date',
-		'end_time'		  => 'required|date',
+		'start_time'	  => 'required|date_format:Y-m-d h:i:s',
+		'end_time'		  => 'required|date_format:Y-m-d h:i:s',
 		'user_id'		  => 'required|numeric',
 		'location_id'     => 'required|numeric',
 	);
 
-	public function rsvpUser()
+	public function attendees()
 	{
 		return $this->belongsToMany('User', 'event_user', 'event_id', 'user_id');
+	}
+
+	public function location()
+	{
+		return $this->hasOne('Location');
+	}
+
+	public function owner()
+	{
+		return $this->hasOne('User', 'users', 'user_id');
+	}
+
+	public function tags()
+	{
+		return $this->belongsToMany('Tag');
 	}
 }

@@ -16,6 +16,8 @@ Route::get('/index', 'HomeController@showIndex');
 
 Route::resource('users/', 'UsersController');
 
+Route::get('/profile/edit', 'HomeController@editProfile');
+
 //
 
 // Confide routes
