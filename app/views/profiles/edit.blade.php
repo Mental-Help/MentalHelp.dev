@@ -1,37 +1,72 @@
 @extends('layouts.master')
 
 @section('content')
-	<div class="container">
-		<h1>Person's Name</h1>
-		<hr>
+    <div class="container">
+        <div class="col-md-12">
+            <h1>Edit Profile</h1>
+            {{ Form::open() }}
+                <div class="col-md-4">
+                    <div>
+                        {{Form::file('image')}}
+                    </div>
 
-		<div class="col-md-4">
-			<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="300">
+                    <div>
+                        {{Form::text('display_name', null, ['class' => 'form-control', 'placeholder' => 'Display Name'])}}
+                    </div>
 
-			<p>Social Media Links</p>
-			<p>Illnesses</p>
-		</div>
+                    <div>
+                        {{Form::text('facebook_url', null, ['class' => 'form-control', 'placeholder' => 'Facebook'])}}
+                    </div>
 
-		<div class="col-md-8">
-			<h3>About Me:</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div>
+                        {{Form::text('twitter_url', null, ['class' => 'form-control', 'placeholder' => 'Twitter'])}}
+                    </div>
 
-			{{-- @foreach () --}}
-			<h3>Stories:</h3>
-			<p>Title</p>
-			<p><small>Date Created: </small></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
+                    <div>
+                        {{Form::text('instagram_url', null, ['class' => 'form-control', 'placeholder' => 'Instagram'])}}
+                    </div>
 
-	</div>
+                    <div class="col-md-4">
+                        {{Form::label('illnesses', "Illnesses:")}}
+                        <div>
+                            @foreach (Config::get('illnesses') as $key => $illness)
+                                <div class="form-group">
+                                    {{ Form::checkbox("illnesses[]", $illness) }}
+                                    {{ Form::label('illnesses[]', $illness) }}
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="about-me-div">
+                        <h2>About Me:</h2>
+                        <div>
+                            {{Form::textarea('about_me', null, ['class' => 'form-control', 'placeholder' => 'About Me'])}}
+                        </div>
+                    </div>
+
+                    <div class="stories-div">
+                        <h2>Stories:</h2>
+                        <div>
+                            <button class="btn btn-default">Add Story <i class="fa fa-plus-circle"></i></button>
+                        </div>
+                        <div class="individual-story well">
+                            {{-- @foreach --}}
+                            <h3>Title</h3>
+                            <p><small>Date Created: </small></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <button class="btn btn-primary story-btn edit-btn">Edit <i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-danger story-btn delete-btn">Delete <i class="fa fa-trash-o"></i></button>
+                        </div>
+                    </div>
+                </div>
+            {{ Form::close() }}
+        </div>
+    </div>
 @stop
