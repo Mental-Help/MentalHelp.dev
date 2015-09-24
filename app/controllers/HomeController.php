@@ -20,7 +20,7 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
-	public function editProfile()
+	public function profile()
 	{
 		return View::make('profiles/edit');
 	}
