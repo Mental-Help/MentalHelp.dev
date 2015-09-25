@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
+		DB::table('user_stories')->delete();
+
 		DB::table('illness_profile')->delete();
 
 		DB::table('illnesses')->delete();
@@ -32,6 +34,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('IllnessesTableSeeder');
 
 		$this->call('IllnessProfileTableSeeder');
+
+		$this->call('UserStoriesTableSeeder');
 	}
 
 }

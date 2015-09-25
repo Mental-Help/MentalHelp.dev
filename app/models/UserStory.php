@@ -1,8 +1,8 @@
 <?php
 
-	use \Esensi\Model\SoftModel;
+	use Esensi\Model\SoftModel;
 
-class UserStory extends \SoftModel {
+class UserStory extends SoftModel {
 	protected $table = 'user_stories';
 
 	protected $fillable = [

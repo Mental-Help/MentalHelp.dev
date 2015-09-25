@@ -9,7 +9,7 @@ class IllnessProfileTableSeeder extends Seeder {
 
 		foreach	(Profile::all() as $profile) {
 
-			$randomSetOfIllnesses = mt_rand(1, 15);
+			$randomSetOfIllnesses = mt_rand(2, 15);
 
 			$illnesses = Illness::all()->random($randomSetOfIllnesses);
 			foreach($illnesses as $illness) {
