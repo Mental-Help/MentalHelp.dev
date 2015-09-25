@@ -14,8 +14,8 @@ class EntrustTableSeeder extends Seeder {
 
 		$user = new Role();
 
-		$user->name 		= 'help-seekers';
-		$user->display_name = 'Help-Seeker User Profile';
+		$user->name 		= 'mental-health-client';
+		$user->display_name = 'Mental Health Client Profile';
 		$user->description  = 'Basic User Profile';
 
 		$user->save();

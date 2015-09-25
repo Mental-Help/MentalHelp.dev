@@ -24,7 +24,7 @@ class CreateCalendarEventsTable extends Migration {
 			$table->dateTime('start_time');
 			$table->dateTime('end_time');
 
-			$table->integer('location_id')->unsigned();
+			$table->integer('location_id')->unsigned()->nullable();
 			$table->foreign('location_id')->references('id')->on('locations');
 
 			$table->integer('user_id')->unsigned();
