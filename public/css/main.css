@@ -97,10 +97,10 @@
   .featurette-heading {
     margin-top: 120px; } }
 /* Login Modal */
-.signup-redirect {
+.signup-redirect, .login-redirect {
   float: left; }
 
-.login-btn {
+.login-btn, .submit-btn {
   background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
   color: #fff; }
 
