@@ -45,6 +45,7 @@
                             {{Form::textarea('about_me', null, ['class' => 'form-control', 'placeholder' => 'About Me'])}}
                         </div>
                     </div>
+            {{ Form::close() }}
 
                     <div class="stories-div">
                         <h2>Stories:</h2>
@@ -66,7 +67,6 @@
                         </div>
                     </div>
                 </div>
-            {{ Form::close() }}
         </div>
     </div>
 @stop
