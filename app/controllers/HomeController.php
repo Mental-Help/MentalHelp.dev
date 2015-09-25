@@ -20,7 +20,6 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
-
 	public function showIndex()
 	{
 		return View::make('layouts.index');
