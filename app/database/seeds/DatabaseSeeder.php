@@ -11,6 +11,10 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
+		DB::table('calendar_events')->delete();
+
+		DB::table('locations')->delete();
+
 		DB::table('tags')->delete();
 
 		DB::table('user_stories')->delete();
@@ -40,6 +44,10 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UserStoriesTableSeeder');
 
 		$this->call('TagsTableSeeder');
+
+		$this->call('LocationsTableSeeder');
+
+		$this->call('CalendarEventsTableSeeder');
 	}
 
 }

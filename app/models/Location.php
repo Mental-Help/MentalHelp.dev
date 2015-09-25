@@ -2,7 +2,7 @@
 
 	use Esensi\Model\SoftModel;
 
-class Location extends \SoftModel {
+class Location extends SoftModel {
 
 	protected $table = 'locations';
 

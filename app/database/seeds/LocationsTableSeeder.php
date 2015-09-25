@@ -9,7 +9,23 @@ class LocationsTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
-		foreach(CalendarEvent::)
+		for($i = 0; $i < 10; $i += 1) {
+			$location = new Location();
+
+			$location->street_address = $faker->streetAddress;
+			$location->city 		  = $faker->city;
+			$location->state 		  = $faker->stateAbbr;
+			$location->zip 			  = 78201;
+
+			$location->latitude 	  = $faker->latitude;
+			$location->longitude	  = $faker->longitude;
+
+			try {
+				$location->saveOrFail();
+			} catch (Exception $e) {
+				dd($e->getErrors()->toArray());
+			}
+		}
 	}
 
 }

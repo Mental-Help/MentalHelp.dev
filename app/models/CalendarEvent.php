@@ -2,8 +2,8 @@
 
 	use Esensi\Model\SoftModel;
 
-class CalendarEvent extends \SoftModel {
-	protected $table = 'events';
+class CalendarEvent extends SoftModel {
+	protected $table = 'calendar_events';
 
 	protected $fillable = [
 		'can_be_physical',
@@ -22,7 +22,7 @@ class CalendarEvent extends \SoftModel {
 		'start_time'	  => 'required|date_format:Y-m-d h:i:s',
 		'end_time'		  => 'required|date_format:Y-m-d h:i:s',
 		'user_id'		  => 'required|numeric',
-		'location_id'     => 'required|numeric',
+		'location_id'     => 'required_if:can_be_physical,true|numeric',
 	);
 
 	public function attendees()
