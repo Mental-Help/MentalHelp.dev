@@ -22,8 +22,8 @@ class HomeController extends BaseController {
 
 	public function showIndex()
 	{
-
-
+		return View::make('layouts.index');
+	}
 	public function editProfile()
 	{
 		return View::make('profiles/edit');
