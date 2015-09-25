@@ -27,7 +27,7 @@ class CalendarEvent extends SoftModel {
 
 	public function attendees()
 	{
-		return $this->belongsToMany('User', 'event_user', 'event_id', 'user_id');
+		return $this->belongsToMany('User', 'calendar_event_user', 'calendar_event_id', 'user_id');
 	}
 
 	public function location()
