@@ -14,9 +14,9 @@ class CreateIllnessProfileTable extends Migration {
 	{
 		Schema::create('illness_profile', function(Blueprint $table)
 		{
-			$table->integer('illness_id')->unsigned()->index();
-			$table->foreign('illness_id')->references('id')->on('illnesses')->onDelete('cascade');
-			$table->integer('profile_id')->unsigned()->index();
+			$table->integer('illness_id')->unsigned();
+			$table->foreign('illness_id')->references('id')->on('illnesses');
+			$table->integer('profile_id')->unsigned();
 			$table->foreign('profile_id')->references('id')->on('profiles')->onDelete('cascade');
 			$table->primary(['illness_id', 'profile_id']);
 		});
