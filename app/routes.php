@@ -16,7 +16,7 @@ Route::get('/index', 'HomeController@showIndex');
 
 Route::resource('users/', 'UsersController');
 
-Route::get('/profile/edit', 'HomeController@editProfile');
+Route::get('/profile/edit', 'HomeController@profile');
 
 //
 

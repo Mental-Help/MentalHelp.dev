@@ -20,11 +20,13 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
+
 	public function showIndex()
 	{
 		return View::make('layouts.index');
 	}
-	public function editProfile()
+
+	public function profile()
 	{
 		return View::make('profiles/edit');
 

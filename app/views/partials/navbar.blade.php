@@ -53,8 +53,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
-                    <li class="signin dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} </a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">My Profile</a></li>
                             <li><a href="#">My Groups</a></li>
@@ -63,7 +63,7 @@
                         </ul>
                     </li>
                 @else
-                    <li class="login"><a class="navbar-user" href="#">Login</a><li>
+                    <li class="signin"><a class="navbar-user" data-toggle="modal" data-target="#loginModal" href="#">Login</a><li>
                 @endif
             </ul>
         </div> <!-- /.navbar-collapse -->
