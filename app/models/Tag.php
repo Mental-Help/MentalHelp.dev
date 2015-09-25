@@ -1,8 +1,8 @@
 <?php
 
-	use Esensi\Model\SoftModel;
+	use Esensi\Model\Model;
 
-class Tag extends SoftModel {
+class Tag extends Model {
 
 	protected $table = 'tags';
 
