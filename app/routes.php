@@ -17,7 +17,7 @@ Route::resource('users/', 'UsersController');
 
 Route::get('/profile/edit', 'HomeController@profile');
 
-//
+Route::get('/dropdown', 'HomeController@dropdown');
 
 // Confide routes
 Route::get('users/create', 'UsersController@create');

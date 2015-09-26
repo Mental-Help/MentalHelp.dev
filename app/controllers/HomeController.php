@@ -24,4 +24,9 @@ class HomeController extends BaseController {
 	{
 		return View::make('profiles/edit');
 	}
+
+	public function dropdown()
+	{
+		return View::make('dropdown-title');
+	}
 }
