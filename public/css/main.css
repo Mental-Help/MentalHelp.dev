@@ -100,7 +100,7 @@
 .signup-redirect, .login-redirect {
   float: left; }
 
-.login-btn, .submit-btn {
+.login-btn, .submit-btn, .save-btn {
   background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
   color: #fff; }
 
@@ -124,6 +124,12 @@
 .delete-btn {
   background-image: linear-gradient(to bottom, #FF8181 0, #f00 100%);
   border-color: #fff; }
+
+.dropdown-featurette-title {
+  margin: 25px 0 50px 25px; }
+
+.dropdown-featurette-heading {
+  margin: 10px 0; }
 
 body {
   font-family: Helvetica, sans-serif; }
