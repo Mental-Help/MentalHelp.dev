@@ -30,4 +30,8 @@ class HomeController extends BaseController {
 		return View::make('profiles/edit');
 
 	}
+	public function showUserIndex()
+	{
+		return View::make('users.index');
+	}
 }
