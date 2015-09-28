@@ -37,7 +37,7 @@
                     </div>
 
                     <div>
-                        {{Form::text('display_name', null, ['class' => 'form-control', 'placeholder' => 'Display Name'])}}
+                        {{Form::text('username', null, ['class' => 'form-control', 'placeholder' => 'Display Name'])}}
                     </div>
 
                     <div>
