@@ -20,9 +20,19 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
+	public function showIndex()
+	{
+		return View::make('layouts.index');
+	}
+
 	public function profile()
 	{
 		return View::make('profiles/edit');
+
+	}
+	public function showUserIndex()
+	{
+		return View::make('users.index');
 	}
 
 	public function dropdown()

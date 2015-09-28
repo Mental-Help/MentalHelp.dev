@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@showHome');
+Route::get('/index', 'HomeController@showIndex');
 
 Route::resource('users/', 'UsersController');
 

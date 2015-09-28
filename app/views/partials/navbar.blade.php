@@ -19,7 +19,7 @@
                     <ul class="dropdown-menu scrollable-menu">
                         <li><a href="#">Caregiver Info</a></li>
                         <li><a href="#">Find Support Groups</a></li>
-                        <li><a href="#">Illness FAQs</a></li>
+                        <li><a href="{{ action('HomeController@showIndex') }}">Illness FAQs Index</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
