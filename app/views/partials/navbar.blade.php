@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Mental Help</a>
+            <a class="navbar-brand" href="{{{action('HomeController@showHome')}}}">Mental Help</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,7 +19,7 @@
                     <ul class="dropdown-menu scrollable-menu">
                         <li><a href="#">Caregiver Info</a></li>
                         <li><a href="#">Find Support Groups</a></li>
-                        <li><a href="#">Illness FAQs</a></li>
+                        <li><a href="{{ action('HomeController@showIndex') }}">Illness FAQs Index</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
