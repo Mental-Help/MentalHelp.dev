@@ -107,6 +107,8 @@ class EntrustTableSeeder extends Seeder {
 
 		$admin->attachPermissions(array(
 			$canBrowseProfiles,
+			$createDigitalGroups,
+			$createPhysicalGroups,
 			$canEditAnothersProfile,
 			$canEditAnothersPosts,
 			$canFlag,
