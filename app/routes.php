@@ -16,9 +16,10 @@ Route::get('/index', 'HomeController@showIndex');
 
 Route::resource('users/', 'UsersController');
 
+//routes made for front-end purposes
 Route::get('/profile/edit', 'HomeController@profile');
-
-//
+Route::get('/dropdown', 'HomeController@dropdown');
+Route::get('/users/index', 'HomeController@userIndex');
 
 // Confide routes
 Route::get('users/create', 'UsersController@create');

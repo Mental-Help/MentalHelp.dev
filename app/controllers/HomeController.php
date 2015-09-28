@@ -34,4 +34,14 @@ class HomeController extends BaseController {
 	{
 		return View::make('users.index');
 	}
+
+	public function dropdown()
+	{
+		return View::make('dropdown-title');
+	}
+
+	public function userIndex()
+	{
+		return View::make('users/index');
+	}
 }

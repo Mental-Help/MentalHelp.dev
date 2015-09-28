@@ -1,8 +1,8 @@
 <?php
 
-	use \Esensi\Model\SoftModel;
+	use Esensi\Model\Model;
 
-class Tag extends \SoftModel {
+class Tag extends Model {
 
 	protected $table = 'tags';
 
@@ -11,7 +11,7 @@ class Tag extends \SoftModel {
 	];
 
 	protected $rules = array(
-		'tags' => 'required|max:255'
+		'tag' => 'required|max:255'
 	);
 
 	public function userStorys()
