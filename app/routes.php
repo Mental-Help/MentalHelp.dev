@@ -22,6 +22,7 @@ Route::patch('users/{users}/role', 'UsersController@editRole');
 Route::resource('users/', 'UsersController');
 
 //routes made for front-end purposes
+Route::get('users/index', 'HomeController@userIndex');
 Route::get('/profile/edit', 'HomeController@profile');
 Route::get('/dropdown', 'HomeController@dropdown');
 Route::get('/users/index', 'HomeController@userIndex');
