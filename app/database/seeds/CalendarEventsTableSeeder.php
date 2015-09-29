@@ -9,22 +9,22 @@ class CalendarEventsTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
-		foreach(Location::all() as $location) {
-			$event = new CalendarEvent();
+		// foreach(Location::all() as $location) {
+		// 	$event = new CalendarEvent();
 
-			$event->title 		    = $faker->bs;
-			$event->description     = $faker->realText(500, 5);
-			$event->can_be_physical = true;
+		// 	$event->title 		    = $faker->bs;
+		// 	$event->description     = $faker->realText(500, 5);
+		// 	$event->can_be_physical = true;
 
-			$event->start_time		= '2015-09-28 12:00:00';
-			$event->end_time		= '2015-09-28 01:00:00';
+		// 	$event->start_time		= '2015-09-28 12:00:00';
+		// 	$event->end_time		= '2015-09-28 01:00:00';
 
-			$event->location_id     = $location->id;
-			$user = User::all()->random();
-			$event->user_id			= $user->id;
+		// 	$event->location_id     = $location->id;
+		// 	$user = User::all()->random();
+		// 	$event->user_id			= $user->id;
 
-			$event->saveOrFail();
-		}
+		// 	$event->saveOrFail();
+		// }
 
 		foreach(CalendarEvent::all() as $physicalEvent) {
 			$firstDigitalEvent = new CalendarEvent();
