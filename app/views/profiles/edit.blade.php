@@ -2,6 +2,7 @@
 
 @section('content')
 
+{{--     ADD STORY MODAL BEGIN
     <div class="modal fade bs-example-modal-lg" id="addStoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -26,6 +27,7 @@
             </div>
         </div>
     </div>
+    ADD STORY MODAL END --}}
 
     <div class="container">
         <div class="col-md-12">

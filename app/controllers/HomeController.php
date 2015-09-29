@@ -42,7 +42,7 @@ class HomeController extends BaseController {
 
 	public function userIndex()
 	{
-		return View::make('users/index');
+		return View::make('users.index');
 	}
 
 

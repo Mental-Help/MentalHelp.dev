@@ -63,7 +63,7 @@
                         </ul>
                     </li>
                 @else
-                    <li class="signin"><a class="navbar-user" data-toggle="modal" data-target="#loginModal" href="#">Login</a><li>
+                    <li class="signin"><a class="navbar-user" data-toggle="modal" data-target="#loginModal" href="# ">Login</a><li>
                 @endif
             </ul>
         </div> <!-- /.navbar-collapse -->
