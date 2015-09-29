@@ -21,6 +21,7 @@ Route::resource('users/', 'AuthController');
 Route::get('/profile/edit', 'HomeController@profile');
 Route::get('/dropdown', 'HomeController@dropdown');
 Route::get('/users/index', 'HomeController@userIndex');
+Route::get('/tutorials', 'HomeController@tutorials');
 
 // Confide routes
 Route::get('users/create', 'AuthController@create');

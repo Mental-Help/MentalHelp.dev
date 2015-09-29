@@ -131,6 +131,37 @@
 .dropdown-featurette-heading {
   margin: 10px 0; }
 
+.tutorials-featurette-title {
+  margin: 25px 0 50px 2%; }
+
+.tutorial-index-title {
+  margin: 25px 0 25px 2%; }
+
+.tutorial-featurette-divider {
+  margin: 100px 0 50px 0; }
+
+.tutorials-index {
+  text-align: center; }
+
+.tutorial-title {
+  margin: 3% 2%; }
+
+.tutorial-description {
+  text-align: center;
+  font-size: 1.25em; }
+
+.tutorial-img {
+  margin: 10px auto; }
+
+.tutorial-steps {
+  list-style-position: inside;
+  text-align: center;
+  padding: 0; }
+
+.back-to-top-anchor {
+  float: right;
+  margin: 0 5%; }
+
 body {
   font-family: Helvetica, sans-serif; }
 
