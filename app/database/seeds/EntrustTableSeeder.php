@@ -15,7 +15,7 @@ class EntrustTableSeeder extends Seeder {
 		$user = new Role();
 
 		$user->name 		= 'mental-health-client';
-		$user->display_name = 'Mental Health Client Profile';
+		$user->display_name = 'Mental Health Client';
 		$user->description  = 'Basic User Profile';
 
 		$user->save();
@@ -23,7 +23,7 @@ class EntrustTableSeeder extends Seeder {
 		$caregiver = new Role();
 
 		$caregiver->name 		 = 'care-giver';
-		$caregiver->display_name = 'Caregiver User Profile';
+		$caregiver->display_name = 'Caregiver';
 		$caregiver->description  = 'Secondary User Profile';
 
 		$caregiver->save();
@@ -31,7 +31,7 @@ class EntrustTableSeeder extends Seeder {
 		$professional = new Role();
 
 		$professional->name 		= 'professional';
-		$professional->display_name = 'Professional User Profile';
+		$professional->display_name = 'Professional';
 		$professional->description  = 'Tertiary User Profile';
 
 		$professional->save();

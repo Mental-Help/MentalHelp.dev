@@ -15,7 +15,11 @@ Route::get('/', 'HomeController@showHome');
 Route::get('/index', 'HomeController@showIndex');
 Route::get('/index/tuts', 'HomeController@showTuts');
 
-Route::resource('users/', 'AuthController');
+//routes made for Users and Roles controlling
+Route::get('users/{users}/user', 'UsersController@role');
+Route::put('users/{users}/role', 'UsersController@editRole');
+Route::patch('users/{users}/role', 'UsersController@editRole');
+Route::resource('users/', 'UsersController');
 
 //routes made for front-end purposes
 Route::get('/profile/edit', 'HomeController@profile');
