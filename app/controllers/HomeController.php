@@ -45,6 +45,12 @@ class HomeController extends BaseController {
 		return View::make('users/index');
 	}
 
+
+	public function showTuts()
+	{
+		return View::make('tuts');
+	}
+
 	public function tutorials()
 	{
 		return View::make('tutorials');

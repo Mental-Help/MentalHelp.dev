@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@showHome');
 Route::get('/index', 'HomeController@showIndex');
+Route::get('/index/tuts', 'HomeController@showTuts');
 
 //routes made for Users and Roles controlling
 Route::get('users/{users}/user', 'UsersController@role');
