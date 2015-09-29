@@ -15,7 +15,11 @@ Route::get('/', 'HomeController@showHome');
 Route::get('/index', 'HomeController@showIndex');
 Route::get('/index/tuts', 'HomeController@showTuts');
 
-Route::resource('users/', 'AuthController');
+//routes made for Users and Roles controlling
+Route::get('users/{users}/user', 'UsersController@role');
+Route::put('users/{users}/role', 'UsersController@editRole');
+Route::patch('users/{users}/role', 'UsersController@editRole');
+Route::resource('users/', 'UsersController');
 
 //routes made for front-end purposes
 Route::get('users/index', 'HomeController@userIndex');
@@ -25,13 +29,13 @@ Route::get('/users/index', 'HomeController@userIndex');
 Route::get('/tutorials', 'HomeController@tutorials');
 
 // Confide routes
-Route::get('users/create', 'AuthController@create');
-Route::post('users', 'AuthController@store');
-Route::get('users/login', 'AuthController@login');
-Route::post('users/login', 'AuthController@doLogin');
-Route::get('users/confirm/{code}', 'AuthController@confirm');
-Route::get('users/forgot_password', 'AuthController@forgotPassword');
-Route::post('users/forgot_password', 'AuthController@doForgotPassword');
-Route::get('users/reset_password/{token}', 'AuthController@resetPassword');
-Route::post('users/reset_password', 'AuthController@doResetPassword');
-Route::get('users/logout', 'AuthController@logout');
+Route::get('auth/create', 'AuthController@create');
+Route::post('auth', 'AuthController@store');
+Route::get('auth/login', 'AuthController@login');
+Route::post('auth/login', 'AuthController@doLogin');
+Route::get('auth/confirm/{code}', 'AuthController@confirm');
+Route::get('auth/forgot_password', 'AuthController@forgotPassword');
+Route::post('auth/forgot_password', 'AuthController@doForgotPassword');
+Route::get('auth/reset_password/{token}', 'AuthController@resetPassword');
+Route::post('auth/reset_password', 'AuthController@doResetPassword');
+Route::get('auth/logout', 'AuthController@logout');
