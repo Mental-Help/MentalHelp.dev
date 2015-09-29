@@ -13,8 +13,9 @@
 
 Route::get('/', 'HomeController@showHome');
 Route::get('/index', 'HomeController@showIndex');
+Route::get('/index/tuts', 'HomeController@showTuts');
 
-Route::resource('users/', 'UsersController');
+Route::resource('users/', 'AuthController');
 
 //routes made for front-end purposes
 Route::get('/profile/edit', 'HomeController@profile');
