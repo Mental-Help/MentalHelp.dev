@@ -131,6 +131,21 @@
 .dropdown-featurette-heading {
   margin: 10px 0; }
 
+/*!
+ * Start Bootstrap - Round About HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+body {
+  padding-top: 70px;
+  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */ }
+
+.img-center {
+  margin: 0 auto; }
+
+footer {
+  margin: 50px 0; }
+
 .tutorials-featurette-title {
   margin: 25px 0 50px 2%; }
 
@@ -162,7 +177,12 @@
   float: right;
   margin: 0 5%; }
 
+#map-canvas {
+  width: 770px;
+  height: 481px; }
+
 body {
-  font-family: Helvetica, sans-serif; }
+  font-family: Helvetica, sans-serif;
+  padding: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -34,3 +34,8 @@ Route::post('users/forgot_password', 'AuthController@doForgotPassword');
 Route::get('users/reset_password/{token}', 'AuthController@resetPassword');
 Route::post('users/reset_password', 'AuthController@doResetPassword');
 Route::get('users/logout', 'AuthController@logout');
+
+Route::get('/google-map', function()
+{
+	return View::make('events.map');
+});

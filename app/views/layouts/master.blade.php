@@ -15,7 +15,16 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.9.0/css/bootstrap-markdown.min.css">
         <!-- Datepicker -->
         <link rel="stylesheet" type="text/css" href="/vendor/datetimepicker/jquery.datetimepicker.css">
+
+        <!-- Custom Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
         <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/creative.css" type="text/css">
+        
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         @yield('style')
     </head>
@@ -35,6 +44,7 @@
         <script type="text/jacascript" src="/js/home_carousel.js"></script>
         <script type="text/javascript" src="/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.9.0/js/bootstrap-markdown.min.js"></script>
+        
         @yield('script')
     </body>
 </html>
