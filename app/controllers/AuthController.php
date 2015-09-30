@@ -43,6 +43,13 @@ class AuthController extends Controller
                     }
                 );
             }
+            if(Input::get('role_select') == 'storytellers') {
+                $userRole = Role::where('name', 'storytellers')->firstOrFail();
+            } else if(Input::get('role_select') == 'advocates') {
+                $userRole = Role::where('name', 'advocates')->firstOrFail();
+            }
+
+            $user->attachRole($userRole);
 
             return Redirect::action('AuthController@login')
                 ->with('notice', Lang::get('confide::confide.alerts.account_created'));

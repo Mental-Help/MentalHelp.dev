@@ -24,9 +24,6 @@ class CreateCalendarEventsTable extends Migration {
 			$table->dateTime('start_time');
 			$table->dateTime('end_time');
 
-			$table->integer('location_id')->unsigned()->nullable();
-			$table->foreign('location_id')->references('id')->on('locations');
-
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 

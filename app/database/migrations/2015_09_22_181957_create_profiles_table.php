@@ -16,8 +16,7 @@ class CreateProfilesTable extends Migration {
 		{
 			$table->increments('id');
 
-			$table->text('about_me');
-			$table->string('username', 255)->nullable()->unique();
+			$table->text('about_me')->nullable();
 
 			$table->boolean('is_public');
 

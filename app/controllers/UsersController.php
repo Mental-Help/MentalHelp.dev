@@ -112,12 +112,21 @@ class UsersController extends \BaseController {
 	public function validateAndSave($user)
 	{
 		try {
-			$user->first_name = Input::get('first_name');
-			$user->last_name  = Input::get('last_name');
-			$user->email 	  = Input::get('email');
-			$user->zip		  = Input::get('zip');
+			$user->remain_anonymous = Input::get('remain_anonymous');
+			$user->username 		= Input::get('username');
+			$user->first_name 		= Input::get('first_name');
+			$user->last_name  		= Input::get('last_name');
+			$user->email 	  		= Input::get('email');
 
 			$user->saveOrFail();
+
+			if($user->remain_anonymous == true) {
+				$user->profile()->is_public = false;
+				$user->profile()->can_be_contacted = false;
+
+				$user->profile()->save();
+
+			}
 
 			Log::info('User Created Successfully');
 
