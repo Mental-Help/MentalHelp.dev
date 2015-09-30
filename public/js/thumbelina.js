@@ -131,4 +131,4 @@
         $fwdBut:    null                // jQuery element used as forward button.
     };
     
-})(jQuery);
+})($);
