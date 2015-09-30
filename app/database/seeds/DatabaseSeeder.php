@@ -19,8 +19,6 @@ class DatabaseSeeder extends Seeder {
 
 		DB::table('calendar_events')->delete();
 
-		DB::table('locations')->delete();
-
 		DB::table('tag_user_story')->delete();
 
 		DB::table('tags')->delete();
@@ -54,8 +52,6 @@ class DatabaseSeeder extends Seeder {
 		$this->call('TagsTableSeeder');
 
 		$this->call('TagUserStoryTableSeeder');
-
-		$this->call('LocationsTableSeeder');
 
 		$this->call('CalendarEventsTableSeeder');
 
