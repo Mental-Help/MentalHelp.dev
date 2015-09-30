@@ -45,6 +45,11 @@ class HomeController extends BaseController {
 		return View::make('tutorials');
 	}
 
+	public function eventStory()
+	{
+		return View::make('events-stories');
+	}
+
 	public function index()
 	{
 		$search =
