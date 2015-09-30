@@ -101,19 +101,19 @@
 
 
         <!-- Controls -->
- <section class="no-padding" id="portfolio">
+     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/img/depression.jpg" class="img-responsive" alt="">
+                        <img src="img/depression.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                   We want to help
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Are you Depressed?
                                 </div>
                             </div>
                         </div>
@@ -121,22 +121,14 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/img/anxiety.jpg" class="img-responsive" alt="">
+                        <img src="img/anxiety.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    
+                                    We want to help
                                 </div>
                                 <div class="project-name">
                                     Do you have Anxiety?
-                        <img src="/img/depression.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
                                 </div>
                             </div>
                         </div>
@@ -144,22 +136,14 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/img/ptsd.jpg" class="img-responsive" alt="">
+                        <img src="img/domestic-violence.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    
+                                    We want to help
                                 </div>
                                 <div class="project-name">
-                                    Do you have PTSD?
-                        <img src="/img/depression.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
+                                    Are you a Victim of Domestic Violence?
                                 </div>
                             </div>
                         </div>
@@ -167,14 +151,14 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/img/depression.jpg" class="img-responsive" alt="">
+                        <img src="img/schizophrenia.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    We want to help
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Do you have Schizophrenia?
                                 </div>
                             </div>
                         </div>
@@ -182,14 +166,14 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/img/depression.jpg" class="img-responsive" alt="">
+                        <img src="img/substance-abuse.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    We want to help
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Are you suffering from Addiction?
                                 </div>
                             </div>
                         </div>
@@ -197,14 +181,14 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/img/depression.jpg" class="img-responsive" alt="">
+                        <img src="img/ptsd.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    We want to help
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Do you suffer from PTSD?
                                 </div>
                             </div>
                         </div>
@@ -212,6 +196,7 @@
                 </div>
             </div>
         </div>
+    </section>
 </section>
 
     <div class="container marketing">
@@ -242,7 +227,6 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">Create a Support Group. <span class="text-muted">It'll blow your mind.</span></h2>
                 <h2 class="featurette-heading">Create a support group. <span class="text-muted">It'll blow your mind.</span></h2>
 
                 <p class="lead">As a patient you are provided with a profile. You can choose to make the profile public or private. Your profile includes your name/username, e-mail if you wish to provide it, and "about me" section, and a story that you can post to. You cas also choose if you want to let people contact you. Caregivers are meant to be there to help you, so our goal is to make it eay to search through their profiles and reach out to them whenever you need to. And lastly you can create digital and/or physical support groups for people in your area.</p>
@@ -256,7 +240,6 @@
 
         <div class="row featurette">
             <div class="col-md-7 col-md-push-5">
-                <h2 class="featurette-heading">Another tutorial heading here. <span class="text-muted">See for yourself.</span></h2>
                 <h2 class="featurette-heading">Another tutorial heading. <span class="text-muted">See for yourself.</span></h2>
 
                 <p class="lead">As a Caregiver you are provided with a profile with your name/username, profile picture, e-mail, an "about me" section and a place to share your story. Our main goal for each caregiver is to help out people in need. Reaching out to a patient or creating a digital and/or physical support group is a great and easy way to do it.</p>
