@@ -10,8 +10,24 @@ class UserStoriesController extends \BaseController {
 	 */
 	public function index()
 	{
-		$stories = $stories->orderBy('updated_at')->paginate(4);
-		return View::make('profiles.index')->with('stories', $stories);
+		$query = UserStory::with('tags');
+
+		$search = strtolower(Input::get('search'));
+
+		If($search) {
+			$query->where('title', 'like', '%' . $search . '%')
+					->where('is_public', '=', true);
+			$query->orWhere('body', 'like', '%' . $search . '%')
+					->where('is_public', '=', '%' . $search . '%');
+			$query->orWhereHas('tags', function($q) {
+				$search = Input::get('search');
+				$q->where('tag', 'like', '%' . $search . '%');
+			});
+		}
+
+		$stories = $query->orderBy('updated_at')->paginate(4);
+
+		return View::make('stories.index')->with('stories', $stories);
 	}
 
 	/**

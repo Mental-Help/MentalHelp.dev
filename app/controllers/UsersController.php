@@ -3,9 +3,6 @@
 class UsersController extends \BaseController {
 
 	protected $entrustPerms = array(
-
-		'index'    => 'can_browse_profiles',
-		'show'     => ['can_browse_profiles'],
 		'edit'     => ['can_edit_own_profile', 'can_edit_another_users_profile'],
 		'update'   => ['can_edit_own_profile', 'can_edit_another_users_profile'],
 		'destroy'  => ['can_edit_another_users_profile', 'can_edit_user_roles'],

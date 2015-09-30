@@ -28,8 +28,8 @@ class HomeController extends BaseController {
 	public function profile()
 	{
 		return View::make('profiles.edit');
-
 	}
+
 	public function showUserIndex()
 	{
 		return View::make('users.index');
@@ -40,12 +40,6 @@ class HomeController extends BaseController {
 		return View::make('dropdown-title');
 	}
 
-	public function userIndex()
-	{
-		return View::make('users.index');
-	}
-
-
 	public function showTuts()
 	{
 		return View::make('tuts');
@@ -54,5 +48,11 @@ class HomeController extends BaseController {
 	public function tutorials()
 	{
 		return View::make('tutorials');
+	}
+
+	public function index()
+	{
+		$search =
+		$event = CalendarEvent::where('tag', 'like', '%' . $search . '%');
 	}
 }

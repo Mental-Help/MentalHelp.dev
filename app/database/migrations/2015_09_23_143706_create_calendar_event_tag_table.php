@@ -19,7 +19,6 @@ class CreateCalendarEventTagTable extends Migration {
 			$table->foreign('calendar_event_id')->references('id')->on('calendar_events');
 			$table->integer('tag_id')->unsigned()->index();
 			$table->foreign('tag_id')->references('id')->on('tags');
-			$table->timestamps();
 		});
 	}
 

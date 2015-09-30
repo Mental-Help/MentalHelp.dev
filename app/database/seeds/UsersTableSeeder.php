@@ -14,9 +14,9 @@ class UsersTableSeeder extends Seeder {
 			$user = new User();
 			$user->remain_anonymous		 = false;
 			$user->email                 = $faker->safeEmail;
+			$user->username				 = $faker->unique()->userName;
 			$user->first_name            = $faker->firstName;
 			$user->last_name             = $faker->lastName;
-			$user->zip					 = 78201;
 			$password                    = "password$i";
 			$user->password              = $password;
 			$user->password_confirmation = $password;

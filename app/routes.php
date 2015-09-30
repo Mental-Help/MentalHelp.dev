@@ -16,20 +16,18 @@ Route::get('/index', 'HomeController@showIndex');
 Route::get('/index/tuts', 'HomeController@showTuts');
 
 //routes made for Profile CRUD Controller
-
-Route::resource('profiles/', 'ProfilesController');
+Route::resource('profiles', 'ProfilesController');
 
 //routes made for Users and Roles controlling
 Route::get('users/{users}/user', 'UsersController@role');
 Route::put('users/{users}/role', 'UsersController@editRole');
 Route::patch('users/{users}/role', 'UsersController@editRole');
-Route::resource('users/', 'UsersController');
+Route::resource('users', 'UsersController');
 
 //routes made for front-end purposes
 Route::get('users/index', 'HomeController@userIndex');
-Route::get('/profile/edit', 'HomeController@profile');
 Route::get('/dropdown', 'HomeController@dropdown');
-Route::get('/users/index', 'HomeController@userIndex');
+Route::get('users/index', 'HomeController@userIndex');
 Route::get('/tutorials', 'HomeController@tutorials');
 
 // Confide routes

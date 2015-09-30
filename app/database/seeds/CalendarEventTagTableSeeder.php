@@ -13,6 +13,7 @@ class CalendarEventTagTableSeeder extends Seeder {
 
 			foreach($tags as $tag) {
 				$event->tags()->attach($tag->id);
+				$event->timestamps = false;
 			}
 		}
 	}
