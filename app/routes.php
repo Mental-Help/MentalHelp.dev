@@ -31,6 +31,7 @@ Route::get('/profile/edit', 'HomeController@profile');
 Route::get('/dropdown', 'HomeController@dropdown');
 Route::get('/users/index', 'HomeController@userIndex');
 Route::get('/tutorials', 'HomeController@tutorials');
+Route::get('/event-slider', 'HomeController@eventStory');
 
 // Confide routes
 Route::get('auth/create', 'AuthController@create');
