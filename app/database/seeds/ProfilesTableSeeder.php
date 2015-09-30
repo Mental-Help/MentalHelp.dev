@@ -13,7 +13,6 @@ class ProfilesTableSeeder extends Seeder {
 			$profile = new Profile();
 
 			$profile->about_me = $faker->realText(200);
-			$profile->username = $faker->userName;
 
 			if ($user->id % 2 == 0) {
 				$profile->is_public = true;

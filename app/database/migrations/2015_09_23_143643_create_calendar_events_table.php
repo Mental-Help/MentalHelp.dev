@@ -19,8 +19,6 @@ class CreateCalendarEventsTable extends Migration {
 			$table->string('title');
 			$table->text('description');
 
-			$table->boolean('can_be_physical');
-
 			$table->dateTime('start_time');
 			$table->dateTime('end_time');
 

@@ -22,7 +22,7 @@ class ProfilesController extends BaseController {
 		if($search) {
 			$query->where('username', 'like', '%' . $search . '%');
 			$query->orWhere('public_email', 'like', '%' . $search . '%');
-			$query=>orWhereHas('userStories', function($q) {
+			$query->orWhereHas('userStories', function($q) {
 				$search = Input::get('search');
 				$q->where('title', 'like', '%' . $search . '%')
 				  	->where('is_public', '=', 'true');

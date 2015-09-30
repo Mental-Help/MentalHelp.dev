@@ -6,7 +6,6 @@ class CalendarEvent extends SoftModel {
 	protected $table = 'calendar_events';
 
 	protected $fillable = [
-		'can_be_physical',
 		'title',
 		'description',
 		'start_time',
@@ -15,7 +14,6 @@ class CalendarEvent extends SoftModel {
 	];
 
 	protected $rules = array(
-		'can_be_physical' => 'required|boolean',
 		'title'			  => 'required|max:255',
 		'description'	  => 'required|max:750',
 		'start_time'	  => 'required|date_format:Y-m-d h:i:s',
