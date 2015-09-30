@@ -12,6 +12,7 @@ class UsersTableSeeder extends Seeder {
 		for($i = 0; $i < 50; $i += 1)
 		{
 			$user = new User();
+			$user->remain_anonymous		 = false;
 			$user->email                 = $faker->safeEmail;
 			$user->first_name            = $faker->firstName;
 			$user->last_name             = $faker->lastName;

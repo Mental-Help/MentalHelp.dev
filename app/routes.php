@@ -15,6 +15,10 @@ Route::get('/', 'HomeController@showHome');
 Route::get('/index', 'HomeController@showIndex');
 Route::get('/index/tuts', 'HomeController@showTuts');
 
+//routes made for Profile CRUD Controller
+
+Route::resource('profiles/', 'ProfilesController');
+
 //routes made for Users and Roles controlling
 Route::get('users/{users}/user', 'UsersController@role');
 Route::put('users/{users}/role', 'UsersController@editRole');

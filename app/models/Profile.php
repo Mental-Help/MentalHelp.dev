@@ -20,12 +20,11 @@ class Profile extends SoftModel {
 	];
 
 	protected $rules = array(
-		'about_me' 		   => 'required|max:500',
-		'username' 		   => 'required|max:255|unique:profiles',
+		'about_me' 		   => 'max:500',
 		'is_public'		   => 'required|boolean',
 		'can_be_contacted' => 'required|boolean',
 		'public_email'	   => 'required_if:can_be_contacted,true|email|max:255|unique:profiles',
-		'image_url'		   => 'max:255|unique:profiles',
+		'image_url'		   => 'mime:jpeg,jpg,png:max:255|unique:profiles',
 		'facebook_url'	   => 'url|max:255|unique:profiles',
 		'twitter_url'	   => 'url|max:255|unique:profiles',
 		'instagram_url'	   => 'url|max:255|unique:profiles',
@@ -45,5 +44,16 @@ class Profile extends SoftModel {
 	public function userStories()
 	{
 		return $this->hasMany('UserStory');
+	}
+
+	public function uploadImage($file)
+	{
+		$name = $file->getClientOriginalName();
+
+		$path = '/uploadedimgs/';
+
+		$file->move(public_path() . $path, $name);
+
+		$this->image_url = $path . $name;
 	}
 }
