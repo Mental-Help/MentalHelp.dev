@@ -35,11 +35,6 @@ class HomeController extends BaseController {
 		return View::make('dropdown-title');
 	}
 
-	public function showTuts()
-	{
-		return View::make('tuts');
-	}
-
 	public function tutorials()
 	{
 		return View::make('tutorials');
