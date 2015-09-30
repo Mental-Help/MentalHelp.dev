@@ -20,8 +20,7 @@ class Profile extends SoftModel {
 	];
 
 	protected $rules = array(
-		'about_me' 		   => 'required|max:500',
-		'username' 		   => 'required|max:255|unique:profiles',
+		'about_me' 		   => 'max:500',
 		'is_public'		   => 'required|boolean',
 		'can_be_contacted' => 'required|boolean',
 		'public_email'	   => 'required_if:can_be_contacted,true|email|max:255|unique:profiles',

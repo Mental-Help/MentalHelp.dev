@@ -26,10 +26,10 @@ class User extends SoftModel implements ConfideUserInterface, EntrustUserInterfa
 
 	protected $rules = array(
 		'email' 	 => 'required|email|max:255|unique:users',
-		'first_name' => 'required|max:255',
-		'last_name'  => 'required|max:255',
-		'password' 	 => 'required|confirmed',
-		'zip'     	 => 'required|numeric'
+		'username'   => 'required|max:255|unique:users',
+		'first_name' => 'max:255',
+		'last_name'  => 'max:255',
+		'password' 	 => 'required|confirmed'
 	);
 
 	protected $hashable = [ 'password' ];

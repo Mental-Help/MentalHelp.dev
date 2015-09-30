@@ -6,7 +6,7 @@ class EntrustTableSeeder extends Seeder {
 	{
 		$admin = new Role();
 
-		$admin->name 		 = 'admin';
+		$admin->name 		 = 'administrator';
 		$admin->display_name = 'User Administrator';
 		$admin->description  = 'System Administrator';
 
@@ -14,34 +14,20 @@ class EntrustTableSeeder extends Seeder {
 
 		$user = new Role();
 
-		$user->name 		= 'mental-health-client';
-		$user->display_name = 'Mental Health Client';
-		$user->description  = 'Basic User Profile';
+		$user->name 		= 'storytellers';
+		$user->display_name = 'Storyteller';
+		$user->description  = 'Type of user seeking assistance and potentially a support network on the site.';
 
 		$user->save();
 
 		$caregiver = new Role();
 
-		$caregiver->name 		 = 'care-giver';
-		$caregiver->display_name = 'Caregiver';
-		$caregiver->description  = 'Secondary User Profile';
+		$caregiver->name 		 = 'advocates';
+		$caregiver->display_name = 'Advocate';
+		$caregiver->description  = 'Type of user seeking to approach the site as a supporter of storytellers, and
+			potentially be a storyteller of their own.';
 
 		$caregiver->save();
-
-		$professional = new Role();
-
-		$professional->name 		= 'professional';
-		$professional->display_name = 'Professional';
-		$professional->description  = 'Tertiary User Profile';
-
-		$professional->save();
-
-		$canBrowseProfiles = new Permission();
-
-		$canBrowseProfiles->name         = 'can_browse_profiles';
-		$canBrowseProfiles->display_name = 'Can Browse Profiles';
-
-		$canBrowseProfiles->save();
 
 		$createDigitalGroups = new Permission();
 
@@ -52,16 +38,6 @@ class EntrustTableSeeder extends Seeder {
 			person sessions.';
 
 		$createDigitalGroups->save();
-
-		$createPhysicalGroups = new Permission();
-
-		$createPhysicalGroups->name 		= 'can_create_physical_groups';
-		$createPhysicalGroups->display_name = 'Can Create Physical Groups';
-		$createPhysicalGroups->description  = 'User is able to schedule physical conference support groups.
-			This permission is held innately by those with the Professionals Role, and to those users who have
-			successfully held at least two digital conference support groups.';
-
-		$createPhysicalGroups->save();
 
 		$canFlag = new Permission();
 
@@ -115,9 +91,7 @@ class EntrustTableSeeder extends Seeder {
 		$canEditRoles->save();
 
 		$admin->attachPermissions(array(
-			$canBrowseProfiles,
 			$createDigitalGroups,
-			$createPhysicalGroups,
 			$canEditAnothersProfile,
 			$canEditAnothersPosts,
 			$canFlag,
@@ -127,7 +101,6 @@ class EntrustTableSeeder extends Seeder {
 		));
 
 		$user->attachPermissions(array(
-			$canBrowseProfiles,
 			$canEditOwnProfile,
 			$canEditOwnPosts,
 			$canFlag,
@@ -135,20 +108,10 @@ class EntrustTableSeeder extends Seeder {
 		));
 
 		$caregiver->attachPermissions(array(
-			$canBrowseProfiles,
 			$canEditOwnProfile,
 			$canEditOwnPosts,
 			$canFlag,
 			$createDigitalGroups
-		));
-
-		$professional->attachPermissions(array(
-			$canBrowseProfiles,
-			$canEditOwnProfile,
-			$canEditOwnPosts,
-			$canFlag,
-			$createDigitalGroups,
-			$createPhysicalGroups
 		));
 	}
 
