@@ -151,17 +151,20 @@ class ProfilesController extends BaseController {
 					$profile->about_me		   = Input::get('about_me');
 					$profile->can_be_contacted = Input::get('can_be_contacted');
 					$profile->public_email	   = Input::get('public_email');
-					$profile->image_url 	   = Input::get('image_url');
+					if (Input::hasFile('image')) {
+						$file = Input::file('image');
+						$profile->uploadImage($file);
+					}
 					$profile->facebook_url 	   = Input::get('facebook_url');
 					$profile->twitter_url  	   = Input::get('twitter_url');
 					$profile->instagram_url    = Input::get('instgram_url');
 				} else {
 					$profile->is_public 	   = Input::get('is_public');
 					$profile->can_be_contacted = 'false';
-					$profile->image			   = 'path/to/default/img.type'; // <---- needs to be updated
+					$profile->image_url		   = '/img/default_profile_img.jpeg';
 				}
 
-				$profile->user_id		   = Auth::id();
+				$profile->user_id = Auth::id();
 
 				$profile->saveOrFail();
 			}
