@@ -5,17 +5,17 @@
 	{{-- <img src="http://placehold.it/1100x250"> --}}
 
 	<div>
-	<h1>{{{ $userstories->title }}}</h1>
-	<small>By: {{{$userstories->user->first_name}}} {{{$userstories->user->last_name}}} | 
-	Date Created: {{{ $userstories->created_at->setTimezone('America/Chicago')->format('F j, Y @ h:i A') }}}</small><br>
+	<h1>{{{ $story->title }}}</h1>
+	<small>By: {{{ $story->profile->user->username }}}
+	Date Created: {{{ $story->created_at }}}</small><br>
 	<hr class="style2">
-		<p>{{{ $userstories->body }}}</p>
+		<p>{{{ $story->body }}}</p>
 
 		@if (Auth::check())
-			<a href="{{{ action('UserStoriessController@edit', $userstories->id) }}}">Edit</a>
+			<a href="{{{ action('UserStoriesController@edit', $story->id) }}}">Edit</a>
 			<button id="deleteBtn">Delete</button>
 
-			{{ Form::open(array('action' => array('UserStoriessController@destroy', $userstories->id), 'method' => 'DELETE', 'id' => 'formDelete')) }}
+			{{ Form::open(array('action' => array('UserStoriesController@destroy', $story->id), 'method' => 'DELETE', 'id' => 'formDelete')) }}
 			{{ Form::close() }}
 		@endif
 	</div>
