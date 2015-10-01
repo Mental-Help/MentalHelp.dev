@@ -31,6 +31,7 @@ Route::get('users/index', 'HomeController@userIndex');
 Route::get('/tutorials', 'HomeController@tutorials');
 Route::get('/event-slider', 'HomeController@eventStory');
 
+
 // Confide routes
 Route::get('auth/create', 'AuthController@create');
 Route::post('auth', 'AuthController@store');
