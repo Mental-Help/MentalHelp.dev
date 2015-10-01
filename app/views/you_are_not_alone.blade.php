@@ -11,12 +11,12 @@
         <div class="slider3" id="event-slider">
             <div class="thumbelina-but vert top">&#708;</div>
             <ul>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
             </ul>
             <div class="thumbelina-but vert bottom">&#709;</div>
         </div>
@@ -27,12 +27,12 @@
         <div class="slider3" id="story-slider">
             <div class="thumbelina-but vert top">&#708;</div>
             <ul>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
-                <li><img src="http://placehold.it/580x150"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
+                <li><img src="http://placehold.it/580x175"></li>
             </ul>
             <div class="thumbelina-but vert bottom">&#709;</div>
         </div>
