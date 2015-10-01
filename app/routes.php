@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', 'HomeController@showHome');
-Route::get('/index', 'HomeController@showIndex');
-Route::get('/index/tuts', 'HomeController@showTuts');
+//routes made for Users and Roles controlling
+Route::get('users/{users}/user', 'UsersController@role');
+Route::put('users/{users}/role', 'UsersController@editRole');
+Route::patch('users/{users}/role', 'UsersController@editRole');
+Route::resource('users', 'UsersController');
 
 //routes made for Profile CRUD Controller
 Route::resource('profiles', 'ProfilesController');
@@ -23,23 +25,15 @@ Route::resource('profiles', 'ProfilesController');
 Route::resource('stories', 'UserStoriesController');
 
 //routes made for CalendarEvents CRUD Controller
+Route::get('events/attendees/{id}', 'CalendarEventsController@rsvp');
 Route::resource('events', 'CalendarEventsController');
 
-//routes made for Users and Roles controlling
-Route::get('users/{users}/user', 'UsersController@role');
-Route::put('users/{users}/role', 'UsersController@editRole');
-Route::patch('users/{users}/role', 'UsersController@editRole');
-Route::resource('users', 'UsersController');
-
 //routes made for front-end purposes
-Route::get('users/index', 'HomeController@userIndex');
-Route::get('/dropdown', 'HomeController@dropdown');
-Route::get('users/index', 'HomeController@userIndex');
+Route::get('/', 'HomeController@showHome');
+Route::get('/you_are_not_alone', 'HomeController@index');
 Route::get('/tutorials', 'HomeController@tutorials');
 
-Route::get('/event-slider', 'HomeController@eventStory');
 
-Route::get('/events/create', 'HomeController@eventsCreate');
 
 // Confide routes
 Route::get('auth/create', 'AuthController@create');
