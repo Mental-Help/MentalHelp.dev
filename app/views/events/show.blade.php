@@ -3,7 +3,11 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
+	        <div class="col-md-6">
+	            <div class="well">
+	                   
+		    </div>
+			<div class="col-md-6">
 				<h1>Support Group Title</h1>
 				<hr>
 				<p>Video chat used</p>
@@ -20,5 +24,7 @@
 			</div>
 		</div>
 	</div>
+
+
 </section>
 @stop
