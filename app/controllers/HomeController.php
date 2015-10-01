@@ -20,21 +20,6 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
-	public function showIndex()
-	{
-		return View::make('layouts.index');
-	}
-
-	public function profile()
-	{
-		return View::make('profiles.edit');
-	}
-
-	public function dropdown()
-	{
-		return View::make('dropdown-title');
-	}
-
 	public function tutorials()
 	{
 		return View::make('tutorials');
@@ -49,8 +34,12 @@ class HomeController extends BaseController {
 			$search = Input::get('tags');
 
 			$storyquery->where('is_public', '=', true)
-				->whereHas('tag', 'like', '%' . $search . '%');
-			$eventquery->whereHas('tag', 'like', '%' . $search . '%');
+				->whereHas('tags', function($q) use ($search) {
+                    $q->where('tag', 'like', '%' . $search . '%');
+                });
+            $eventquery->whereHas('tags', function($q) use ($search) {
+                $q->where('tag', 'like', '%' . $search . '%');
+            });
 		}
 
         $events  = $eventquery->orderBy('updated_at')->paginate(3);
