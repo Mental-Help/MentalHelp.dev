@@ -110,10 +110,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                   We want to help
+                                   Find user stories and events for
                                 </div>
                                 <div class="project-name">
-                                    Are you Depressed?
+                                    Depression
                                 </div>
                             </div>
                         </div>
@@ -125,10 +125,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    We want to help
+                                    Find user stories and events for
                                 </div>
                                 <div class="project-name">
-                                    Do you have Anxiety?
+                                    Anxiety
                                 </div>
                             </div>
                         </div>
@@ -140,10 +140,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    We want to help
+                                    Find user stories and events for
                                 </div>
                                 <div class="project-name">
-                                    Are you a Victim of Domestic Violence?
+                                    Violence
                                 </div>
                             </div>
                         </div>
@@ -155,10 +155,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    We want to help
+                                    Find user stories and events for
                                 </div>
                                 <div class="project-name">
-                                    Do you have Schizophrenia?
+                                    Personality Disorders
                                 </div>
                             </div>
                         </div>
@@ -170,10 +170,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    We want to help
+                                    Find user stories and events for
                                 </div>
                                 <div class="project-name">
-                                    Are you suffering from Addiction?
+                                    Substance Use Disorders
                                 </div>
                             </div>
                         </div>
@@ -185,10 +185,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    We want to help
+                                    Find user stories and events for
                                 </div>
                                 <div class="project-name">
-                                    Do you suffer from PTSD?
+                                    PTSD
                                 </div>
                             </div>
                         </div>
