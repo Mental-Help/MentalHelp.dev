@@ -143,7 +143,7 @@
                                     Find user stories and events for
                                 </div>
                                 <div class="project-name">
-                                    Violence
+                                    Domestic Violence
                                 </div>
                             </div>
                         </div>
