@@ -45,6 +45,11 @@ class HomeController extends BaseController {
 		return View::make('events.create');
 	}
 
+	// public function notAlone()
+	// {
+	// 	return View::make('you_are_not_alone')
+	// }
+
 	public function index()
 	{
         $eventquery = CalendarEvent::with('tags');
