@@ -321,8 +321,9 @@ footer {
 .signup-redirect, .login-redirect {
   float: left; }
 
-.login-btn, .submit-btn, .save-btn {
+.login-btn, .submit-btn, .save-btn, .form-submit {
   float: right;
+  width: 15%;
   background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
   color: #fff; }
 

@@ -18,6 +18,13 @@ Route::get('/index/tuts', 'HomeController@showTuts');
 //routes made for Profile CRUD Controller
 Route::resource('profiles', 'ProfilesController');
 
+
+//routes made for User Stories CRUD Controller
+Route::resource('stories', 'UserStoriesController');
+
+//routes made for CalendarEvents CRUD Controller
+Route::resource('events', 'CalendarEventsController');
+
 //routes made for Users and Roles controlling
 Route::get('users/{users}/user', 'UsersController@role');
 Route::put('users/{users}/role', 'UsersController@editRole');
@@ -29,13 +36,10 @@ Route::get('users/index', 'HomeController@userIndex');
 Route::get('/dropdown', 'HomeController@dropdown');
 Route::get('users/index', 'HomeController@userIndex');
 Route::get('/tutorials', 'HomeController@tutorials');
+
 Route::get('/event-slider', 'HomeController@eventStory');
 
-//event show route that you are supposed to remind meghan to remember to delete. so if its still here i blame yall.
-Route::get('/events/show', function()
-{
-    return View::make('events.show');
-});
+Route::get('/events/create', 'HomeController@eventsCreate');
 
 // Confide routes
 Route::get('auth/create', 'AuthController@create');
