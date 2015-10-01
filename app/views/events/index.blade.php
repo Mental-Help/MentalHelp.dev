@@ -4,20 +4,18 @@
 	<h1>All Posts</h1>
 	<hr class="style2">
 	<div class="col-md-8">
-		{{ $userstories->appends(array('search' => Input::get('search')))->links() }}
-	@forelse ($userstories as $key => $value)
-		<h3><a id="index-title" class="read-more" href="{{{ action('UserStoriesController@show', $value->id) }}}">{{{ $value->title }}}</a></h3>
-		<small>By: {{{$value->user->first_name}}} {{{$value->user->last_name}}} | 
-		When: {{{ $value->start_time->setTimezone('America/Chicago')->format('F j, Y @ h:i A') }}}</small><br>
-		<p>{{{ Str::words($value->body, 20)}}}
-		<a class="read-more" href="{{{ action('userstoriesController@show', $value->id) }}}">Read More</a>
+	@forelse ($events as $event)
+		<h3><a id="index-title" class="read-more" href="{{{ action('CalendarEventsController@show', $event->id) }}}">{{{ $event->title }}}</a></h3>
+		When: {{{ $event->start_time }}}</small><br>
+		<p>{{{ Str::words($event->description, 20)}}}
+		<a class="read-more" href="{{{ action('CalendarEventsController@show', $event->id) }}}">Read More</a>
 		<p>
 
     @empty
         <h3>There aren't any events to display at this time.</h3>
     @endforelse
 
-		{{ $userstories->appends(array('search' => Input::get('search')))->links() }}
+	{{ $events->appends(array('search' => Input::get('search')))->links() }}
 	</div>
 
 	<div class="col-md-4">
@@ -25,7 +23,7 @@
         <div class="well">
             <h4>Blog Search</h4>
             <div class="input-group">
-	            <form class="search-input navbar-form navbar-right" method="GET" role="search" action="{{ action('UserStoriesController@index') }}">
+	            <form class="search-input navbar-form navbar-right" method="GET" role="search" action="{{ action('CalendarEventsController@index') }}">
 			    	<div class="form-group">
 			        	<input name="search" type="text" class="form-control" placeholder="Search">
 			    	</div>

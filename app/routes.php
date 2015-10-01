@@ -15,6 +15,8 @@
 Route::get('users/{users}/user', 'UsersController@role');
 Route::put('users/{users}/role', 'UsersController@editRole');
 Route::patch('users/{users}/role', 'UsersController@editRole');
+Route::get('users/index', 'UsersController@index');
+Route::get('users/stories', 'UserStoriesController@index');
 Route::resource('users', 'UsersController');
 
 //routes made for Profile CRUD Controller
@@ -26,6 +28,7 @@ Route::resource('stories', 'UserStoriesController');
 
 //routes made for CalendarEvents CRUD Controller
 Route::get('events/attendees/{id}', 'CalendarEventsController@rsvp');
+Route::get('events/index', 'CalendarEventsController@index');
 Route::resource('events', 'CalendarEventsController');
 
 //routes made for front-end purposes

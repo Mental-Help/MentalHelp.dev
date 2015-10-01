@@ -4,20 +4,18 @@
 	<h1>All Posts</h1>
 	<hr class="style2">
 	<div class="col-md-8">
-		{{ $userstories->appends(array('search' => Input::get('search')))->links() }}
-	@forelse ($userstories as $key => $value)
-		<h3><a id="index-title" class="read-more" href="{{{ action('UserStoriesController@show', $value->id) }}}">{{{ $value->title }}}</a></h3>
-		<small>By: {{{$value->user->first_name}}} {{{$value->user->last_name}}} | 
-		Date Created: {{{ $value->created_at->setTimezone('America/Chicago')->format('F j, Y @ h:i A') }}}</small><br>
-		<p>{{{ Str::words($value->body, 20)}}}
-		<a class="read-more" href="{{{ action('userstoriesController@show', $value->id) }}}">Read More</a>
+	@forelse ($stories as $story)
+		<h3><a id="index-title" class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">{{{ $story->title }}}</a></h3>
+		<small>By: {{{$story->profile->user->username}}} 
+		Date Created: {{{ $story->created_at }}}</small><br>
+		<p>{{{ Str::words($story->body, 20)}}}
+		<a class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">Read More</a>
 		<p>
 
     @empty
         <h3>There aren't any stories to display at this time.</h3>
     @endforelse
-
-		{{ $userstories->appends(array('search' => Input::get('search')))->links() }}
+	{{ $stories->appends(array('search' => Input::get('search')))->links() }}
 	</div>
 
 	<div class="col-md-4">
