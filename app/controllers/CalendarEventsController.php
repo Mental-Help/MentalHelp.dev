@@ -34,7 +34,9 @@ class CalendarEventsController extends \BaseController {
 			});
 		}
 
-		$events = $query->orderBy('updated_at')->paginate(16)
+		$events = $query->orderBy('updated_at')->paginate(5);
+
+		return View::make('events.index')->with('events', $events);
 	}
 
 	/**
@@ -45,7 +47,7 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('events.create');
 	}
 
 	/**
@@ -56,7 +58,9 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$event = new CalendarEvent();
+
+		return $this->validateAndSave($event);
 	}
 
 	/**
@@ -68,7 +72,16 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$event = CalendarEvent::findOrFail($id);
+
+		if (!$event){
+
+			Log::info('404', Input::all());
+
+			App::abort(404);
+		}
+
+		return View::make('events.show')->with('event', $event);
 	}
 
 	/**
@@ -80,7 +93,19 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$event = CalendarEvent::findOrFail($id);
+
+		if (!$event) {
+			Log::info('Attempt to edit a non-event!');
+
+			if ($event->user_id != Auth::id()) {
+				Log::info('Attempt to edit event of different owner');
+			}
+
+			App::abort(404);
+		}
+
+		return View::make('events.edit')->with('event', $event);
 	}
 
 	/**
@@ -92,7 +117,19 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$event = CalendarEvent::findOrFail($id);
+
+		if (!$event) {
+			Log::info('Attempt to edit a non-event!');
+
+			if ($event->user_id != Auth::id()) {
+				Log::info('Attempt to edit event of different owner');
+			}
+
+			App::abort(404);
+		}
+
+		return $this->validateAndSave($event);
 	}
 
 	/**
@@ -104,7 +141,53 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$event = CalendarEvent::find($id);
+
+		if (!$event){
+			Log::info('Attempt to edit a non-event!' . Auth::user());
+
+			if($event->user_id != Auth::id()) {
+				Log::info('Attempt to delete event of different owner' . Auth::user());
+			}
+			App::abort(404);
+		}
+
+		$event->delete();
+
+		return Redirect::action('CalendarEventsController@index');
 	}
 
+	public function validateAndSave($event)
+	{
+		try {
+			$event->title 		= Input::get('title');
+			$event->description = Input::get('description');
+			$event->start_time  = Input::get('start_time');
+			$event->end_time    = Input::get('end_time');
+			$event->user_id 	= Auth::id();
+
+			Log::info("User Event created successfully.");
+
+			Log::info("Log Message", array('context' => Input::all()));
+
+			return Redirect::action('CalendarEventsController@show', array($event->id));
+
+		} catch (Watson\Validating\ValidationException $e) {
+
+			Session::flash('errorMessage',
+				'Ohh no! Something went wrong. You should be seeing some errors down below.');
+
+			Log::info('Validation failed', Input::all());
+
+			Log::info($e->getErrors()->toArray());
+			return Redirect::back()->withErrors($e->getErrors())->withInput();
+		}
+	}
+
+	public function rsvp($id)
+	{
+		$event = CalendarEvent::findOrFail($id);
+
+		$event->attendees()->attach(Auth::id());
+	}
 }
