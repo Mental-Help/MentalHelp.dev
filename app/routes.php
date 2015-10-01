@@ -22,6 +22,7 @@ Route::resource('profiles', 'ProfilesController');
 Route::resource('stories', 'UserStoriesController');
 
 //routes made for CalendarEvents CRUD Controller
+Route::get('events/attendees/{id}', 'CalendarEventsController@rsvp');
 Route::resource('events', 'CalendarEventsController');
 
 //routes made for Users and Roles controlling
@@ -34,7 +35,6 @@ Route::resource('users', 'UsersController');
 Route::get('/you_are_not_alone', 'HomeController@index');
 Route::get('/dropdown', 'HomeController@dropdown');
 Route::get('/tutorials', 'HomeController@tutorials');
-Route::get('/events/create', 'HomeController@eventsCreate');
 
 
 // Confide routes
