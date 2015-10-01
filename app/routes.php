@@ -18,6 +18,9 @@ Route::get('/index/tuts', 'HomeController@showTuts');
 //routes made for Profile CRUD Controller
 Route::resource('profiles', 'ProfilesController');
 
+//routes made for User Stories CRUD Controller
+Route::resource('stories', 'UserStoriesController');
+
 //routes made for Users and Roles controlling
 Route::get('users/{users}/user', 'UsersController@role');
 Route::put('users/{users}/role', 'UsersController@editRole');

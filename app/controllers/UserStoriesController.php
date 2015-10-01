@@ -2,6 +2,12 @@
 
 class UserStoriesController extends \BaseController {
 
+	protected $entrustPerms = array(
+		'create'  => ['can_edit_own_posts', 'can_edit_another_users_posts'];
+		'edit'    => ['can_edit_own_posts', 'can_edit_another_users_posts'],
+		'destroy' => 'can_edit_another_users_posts'
+	);
+
 	/**
 	 * Display a listing of the resource.
 	 * GET /userstories
@@ -38,7 +44,7 @@ class UserStoriesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('stories.create');
 	}
 
 	/**
@@ -49,7 +55,13 @@ class UserStoriesController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$story = new UserStory();
+		// validation succeeded, create and save the post
+		Log::info("User Story created successfully.");
+
+		Log::info("Log Message", array('context' => Input::all()));
+
+		return $this->validateAndSave($story);
 	}
 
 	/**
@@ -61,8 +73,13 @@ class UserStoriesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$stories = $stories->orderBy('updated_at')->paginate(4);
-		return View::make('profiles.index')->with('stories', $stories);
+		$story = UserStory::findOrFail($id);
+
+		if (!$story) {
+			App::abort(404);
+		}
+
+		return View::make('stories.show')->with('story', $story);
 	}
 
 	/**
@@ -74,7 +91,7 @@ class UserStoriesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return View::make('stories.edit');
 	}
 
 	/**
@@ -86,7 +103,13 @@ class UserStoriesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$story = UserStory::findOrFail($id);
+
+		if(!$story) {
+			App::abort(404);
+		}
+
+		return $this->validateAndSave($story);
 	}
 
 	/**
@@ -98,7 +121,40 @@ class UserStoriesController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$story = UserStory::findOrFail($id);
+		$story->delete();
+
+		Session::flash('successMessage', 'This user story has been successfully deleted.');
+
+		return Redirect::action('UserStoriesController@index');
 	}
+
+	public function validateAndSave($story)
+	{
+		try {
+
+			$story->title	  = Input::get('title');
+			$story->body  	  = Input::get('body');
+			$story->is_public = Input::get('is_public');
+
+			$profile_id = Auth::user()->profile->id;
+			$story->profile_id = $profile_id;
+
+			Log::info('User Profile Created Successfully');
+
+			Log::info('Log Message', array('context', Input::all()));
+
+			return Redirect::action('UserStoriesController@show', array($story->id));
+
+		} catch (Watson\Validating\ValidationException $e) {
+
+			Session::flash('errorMessage',
+				'Ohh no! Something went wrong. You should be seeing some errors down below.');
+
+			Log::info('Validation failed', Input::all());
+
+			Log::info($e->getErrors()->toArray());
+			return Redirect::back()->withErrors($e->getErrors())->withInput();
+		}
 
 }

@@ -134,8 +134,8 @@ class ProfilesController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		$post = Post::findOrFail($id);
-		$post->delete();
+		$profile = Profile::findOrFail($id);
+		$profile->delete();
 
 		Session::flash('successMessage', 'This profile has been successfully deleted.');
 
