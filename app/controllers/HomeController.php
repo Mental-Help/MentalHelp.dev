@@ -24,7 +24,7 @@ class HomeController extends BaseController {
 	{
 		return View::make('tutorials');
 	}
-    
+
 	public function index()
 	{
         $eventquery = CalendarEvent::with('tags');
