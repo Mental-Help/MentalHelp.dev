@@ -36,6 +36,7 @@ Route::get('/dropdown', 'HomeController@dropdown');
 Route::get('/tutorials', 'HomeController@tutorials');
 Route::get('/events/create', 'HomeController@eventsCreate');
 
+
 // Confide routes
 Route::get('auth/create', 'AuthController@create');
 Route::post('auth', 'AuthController@store');

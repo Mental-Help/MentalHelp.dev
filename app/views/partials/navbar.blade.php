@@ -15,39 +15,13 @@
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mental Health</a>
-                    <ul class="dropdown-menu scrollable-menu">
-                        <li><a href="#">Caregiver Info</a></li>
-                        <li><a href="#">Find Support Groups</a></li>
-                        <li><a href="{{ action('HomeController@showIndex') }}">Illness FAQs Index</a></li>
-                    </ul>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse Stories</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Veterans</a>
-                    <ul class="dropdown-menu scrollable-menu">
-                        <li><a href="#">Families</a></li>
-                        <li><a href="#">Find Support Groups</a></li>
-                        <li><a href="#">Military Jargan</a></li>
-                        <li><a href="#">Post-Deployment</a></li>
-                    </ul>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Users</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recent Trauma</a>
-                    <ul class="dropdown-menu scrollable-menu">
-                        <li><a href="#">Families & Caregivers</a></li>
-                        <li><a href="#">Find Support Groups</a></li>
-                        <li><a href="#">Medical Jargan</a></li>
-                        <li><a href="#">Post-Diagnosis</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caregivers</a>
-                    <ul class="dropdown-menu scrollable-menu">
-                        <li><a href="#">Caring for Family</a></li>
-                        <li><a href="#">Find Support</a></li>
-                        <li><a href="#">Mental Illness FAQs</a></li>
-                        <li><a href="#">Medical Illness FAQs</a></li>
-                    </ul>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Support Groups</a>
                 </li>
             </ul>
 
@@ -58,8 +32,8 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">My Profile</a></li>
                             <li><a href="#">My Groups</a></li>
-                            <li><a href="#">My Experiences</a></li>
-                            <li><a href="#">My Logout</a></li>
+                            <li><a href="#">My Stories</a></li>
+                            <li><a href="#">Logout</a></li>
                         </ul>
                     </li>
                 @else
