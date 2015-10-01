@@ -1,69 +1,333 @@
+.navbar {
+  margin: 0; }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; }
+
+.navbar-default {
+  background-image: linear-gradient(to bottom, #00A8E8 0, #00A8E8 100%); }
+
+.navbar-default .navbar-brand {
+  color: #fff; }
+
+.navbar-nav .dropdown .dropdown-toggle {
+  color: #fff; }
+
+.navbar-default .navbar-nav li a {
+  color: #000; }
+
+/*CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px; }
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10; }
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777; }
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px; }
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center; }
+
+.marketing h2 {
+  font-weight: normal; }
+
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px; }
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */ }
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px; }
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px; }
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px; }
+
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0; }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px; }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4; }
+
+  .featurette-heading {
+    font-size: 50px; } }
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px; } }
+/*# sourceMappingURL=main.css.map*/
+.individual-story {
+  background-image: linear-gradient(to bottom, rgba(113, 247, 159, 0.3) 0, rgba(113, 247, 159, 0.3) 100%);
+  border: 1px solid #fff;
+  border-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  height: auto; }
+
+.story-btn {
+  float: right; }
+
+.edit-btn {
+  background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
+  border-color: #fff; }
+
+.delete-btn {
+  background-image: linear-gradient(to bottom, #FF8181 0, #f00 100%);
+  border-color: #fff; }
+
+.dropdown-featurette-title {
+  margin: 25px 0 50px 25px; }
+
+.dropdown-featurette-heading {
+  margin: 10px 0; }
+
+/*!
+ * Start Bootstrap - Round About HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+body {
+  padding-top: 70px;
+  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */ }
+
+.img-center {
+  margin: 0 auto; }
+
+footer {
+  margin: 50px 0; }
+
+.tutorials-featurette-title {
+  margin: 25px 0 50px 2%; }
+
+.tutorial-index-title {
+  margin: 25px 0 25px 2%; }
+
+.tutorial-featurette-divider {
+  margin: 100px 0 50px 0; }
+
+.tutorials-index {
+  text-align: center; }
+
+.tutorial-title {
+  margin: 3% 2%; }
+
+.tutorial-description {
+  text-align: center;
+  font-size: 1.25em; }
+
+.tutorial-img {
+  margin: 10px auto; }
+
+.tutorial-steps {
+  list-style-position: inside;
+  text-align: center;
+  padding: 0; }
+
+.back-to-top-anchor {
+  float: right;
+  margin: 0 5%; }
+
+.story-teller {
+  padding-top: 60px;
+  height: 500px;
+  width: 400px; }
+
+#map-canvas {
+  width: 770px;
+  height: 481px; }
+
 /*
-Error: Invalid CSS after ".event-title, ": expected "{", was ""
-        on line 8 of public/css/_you-are-not-alone.scss
-        from line 10 of public/css/main.scss
+    Thumbelina Content Slider
+    V1.0 Rev 1302190900
 
-3: 	height: auto;
-4: 	background-color: #DEDEDE;
-5: 	margin: auto;
-6: }
-7: 
-8: .event-title,
+    A lightweight horizontal and vertical content slider designed for image thumbnails.
+    http://www.starplugins.com/thumbelina
 
-Backtrace:
-public/css/_you-are-not-alone.scss:8
-public/css/main.scss:10
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1162:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1098:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:1093:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:638:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:632:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:657:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:650:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:403:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:309:in `to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.18/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+    Developed by Star Plugins
+    http://www.starplugins.com
+
+    Copyright 2013, Star Plugins
+    License: GNU General Public License, version 3 (GPL-3.0)
+    http://www.opensource.org/licenses/gpl-3.0.html
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \".event-title, \": expected \"{\", was \"\"\A         on line 8 of public/css/_you-are-not-alone.scss\A         from line 10 of public/css/main.scss\A \A 3: 	height: auto;\A 4: 	background-color: #DEDEDE;\A 5: 	margin: auto;\A 6: }\A 7: \A 8: .event-title,"; }
+/*
+    This style will be applied to the first list element (UL tag)
+    inside the container.
+    ### This should not require changing ###
+*/
+.thumbelina {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  white-space: nowrap;
+  /* font-size:0 stop gaps between display-inline li elemets */
+  /* Either do this, or remove all white space in HTML beween li elements */
+  font-size: 0;
+  /* prevent annoying iPad cut/paste actions */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
+/* Style for the list items that surround the thumbnails */
+.thumbelina li {
+  padding: 5px;
+  line-height: 0px;
+  margin: 0px; }
+
+/* Add a border to the thumbnails. */
+.thumbelina li img {
+  border: 1px solid #ccc; }
+
+/* Hover effect for the images */
+.thumbelina li img:hover {
+  border: 1px solid #aaa; }
+
+/*
+    Following is the CSS for the navigation buttons.
+    They are designed to fit flush on the ends of the slider
+    using absolute positioning, with the container as the parent element.
+    The sizes are set to match the demo slider.
+    You can change any of this as you wish - you don't even need to use these classes.
+    Position the buttons where you like on the page, change sizes, use images etc.
+    They don't have to be children of the container.
+*/
+/* Common style for the buttons */
+.thumbelina-but {
+  position: absolute;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  cursor: pointer;
+  /* Font related items for the symbols used on buttons */
+  /* Obviously not needed if you're just using images */
+  color: #888;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: monospace; }
+
+/* Hover style for active button */
+.thumbelina-but:hover {
+  color: #fff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); }
+
+/* Disabled style when button is not active due to extents being reached. */
+/* You could do other things e.g. make buttons dissapear completely. */
+.thumbelina-but.disabled,
+.thumbelina-but.disabled:hover {
+  background-color: #efefef;
+  color: #ccc;
+  cursor: default;
+  box-shadow: none; }
+
+/* Horizontal buttons. */
+.thumbelina-but.horiz {
+  width: 20px;
+  height: 119px;
+  line-height: 119px;
+  top: -1px; }
+
+/* Left edge button. */
+.thumbelina-but.horiz.left {
+  left: -22px;
+  border-radius: 5px 0px 0px 5px; }
+
+/* Right edge button */
+.thumbelina-but.horiz.right {
+  right: -22px;
+  border-radius: 0px 5px 5px 0px; }
+
+/* Vertical buttons. */
+.thumbelina-but.vert {
+  left: -1px;
+  height: 20px;
+  line-height: 20px;
+  width: 93px; }
+
+/* Top edge button. */
+.thumbelina-but.vert.top {
+  top: -22px;
+  border-radius: 5px 5px 0px 0px; }
+
+/* Bottom edge button. */
+.thumbelina-but.vert.bottom {
+  bottom: -22px;
+  border-radius: 0px 0px 5px 5px; }
+
+.story-slider {
+  position: relative;
+  margin-left: 20px;
+  width: 75%;
+  height: 120px;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa; }
+
+.single-item {
+  width: 100%;
+  height: auto;
+  background-color: #DEDEDE;
+  margin: auto; }
+
+.form-background {
+  height: auto;
+  margin: 3% auto;
+  border-radius: 4px;
+  padding: 15px; }
+
+.signup-redirect, .login-redirect {
+  float: left; }
+
+.login-btn, .submit-btn, .save-btn {
+  float: right;
+  background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
+  color: #fff; }
+
+body {
+  font-family: Helvetica, sans-serif;
+  padding: 0; }
+
+/*# sourceMappingURL=main.css.map */
