@@ -9,9 +9,9 @@ $(function(){
 	// 	$fwdBut:$('#.story-slider.right')    // Selector to right button.
 	// });
 
-	$('#slider3').Thumbelina({
+	$('#event-slider').Thumbelina({
 		orientation:'vertical',         // Use vertical mode (default horizontal).
-		$bwdBut:$('#slider3 .top'),     // Selector to top button.
-		$fwdBut:$('#slider3 .bottom')   // Selector to bottom button.
+		$bwdBut:$('#event-slider .top'),     // Selector to top button.
+		$fwdBut:$('#event-slider .bottom')   // Selector to bottom button.
 	});
 })();

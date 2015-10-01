@@ -79,6 +79,7 @@
     font-size:14px;
     font-weight: bold;
     font-family:monospace;
+    width: 100%;
 }
 
 /* Hover style for active button */    
@@ -121,7 +122,7 @@
     left:-1px;
     height: 20px;
     line-height: 20px;
-    width:93px
+    width: 100.5%;
 }
 
 /* Top edge button. */
@@ -136,31 +137,12 @@
     border-radius: 0px 0px 5px 5px;
 }
 
-// .event-slider {
-//     position:relative;  /* Containers need relative or absolute position. */
-//     margin-left:20px;
-//     width:256px;
-//     height:120px;
-//     border-top:1px solid #aaa;
-//     border-bottom:1px solid #aaa;
-// }
-
-.story-slider {
+.slider3 {
     position:relative;
-    margin-left:20px;
-    width:75%;
-    height:120px;
-    border-top:1px solid #aaa;
-    border-bottom:1px solid #aaa;
+    margin-top:40px;
+    width:100%;
+    height:80%;
+    border-left:1px solid #aaa;
+    border-right:1px solid #aaa;
+    margin-bottom:40px;
 }
-
-
-// #slider3 {
-//     position:relative;
-//     margin-top:40px;
-//     width:93px;
-//     height:256px;
-//     border-left:1px solid #aaa;
-//     border-right:1px solid #aaa;
-//     margin-bottom:40px;
-// }

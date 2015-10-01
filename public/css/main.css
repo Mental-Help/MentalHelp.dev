@@ -248,7 +248,8 @@ footer {
   vertical-align: middle;
   font-size: 14px;
   font-weight: bold;
-  font-family: monospace; }
+  font-family: monospace;
+  width: 100%; }
 
 /* Hover style for active button */
 .thumbelina-but:hover {
@@ -286,7 +287,7 @@ footer {
   left: -1px;
   height: 20px;
   line-height: 20px;
-  width: 93px; }
+  width: 100.5%; }
 
 /* Top edge button. */
 .thumbelina-but.vert.top {
@@ -298,13 +299,14 @@ footer {
   bottom: -22px;
   border-radius: 0px 0px 5px 5px; }
 
-.story-slider {
+.slider3 {
   position: relative;
-  margin-left: 20px;
-  width: 75%;
-  height: 120px;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa; }
+  margin-top: 40px;
+  width: 100%;
+  height: 80%;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  margin-bottom: 40px; }
 
 .single-item {
   width: 100%;
@@ -328,7 +330,7 @@ footer {
   color: #fff; }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: Merriweather, sans-serif;
   padding: 0; }
 
 /*# sourceMappingURL=main.css.map */
