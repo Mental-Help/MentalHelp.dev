@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{{action('HomeController@showHome')}}}">Mental Help</a>
+            <a class="navbar-brand" href="{{ action('HomeController@showHome') }}">Mental Help</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -15,13 +15,13 @@
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse Stories</a>
+                    <a href="{{ action('UserStoriesController@index') }}">Browse Stories</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Users</a>
+                    <a href="{{ action('UsersController@index') }}">Find Users</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Support Groups</a>
+                    <a href="{{ action('CalendarEventsController@index') }}">Find Support Groups</a>
                 </li>
             </ul>
 

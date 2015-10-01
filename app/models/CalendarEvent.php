@@ -28,7 +28,7 @@ class CalendarEvent extends SoftModel {
 
 	public function owner()
 	{
-		return $this->hasOne('User', 'users', 'user_id');
+		return $this->hasOne('User', 'id', 'user_id');
 	}
 
 	public function tags()

@@ -15,22 +15,28 @@
 Route::get('users/{users}/user', 'UsersController@role');
 Route::put('users/{users}/role', 'UsersController@editRole');
 Route::patch('users/{users}/role', 'UsersController@editRole');
+Route::get('users/index', 'UsersController@index');
 Route::resource('users', 'UsersController');
 
 //routes made for Profile CRUD Controller
 Route::resource('profiles', 'ProfilesController');
 
+
 //routes made for User Stories CRUD Controller
 Route::resource('stories', 'UserStoriesController');
+Route::get('stories/index', 'UserStoriesController@index');
 
 //routes made for CalendarEvents CRUD Controller
 Route::get('events/attendees/{id}', 'CalendarEventsController@rsvp');
+Route::get('events/index', 'CalendarEventsController@index');
 Route::resource('events', 'CalendarEventsController');
 
 //routes made for front-end purposes
 Route::get('/', 'HomeController@showHome');
 Route::get('/you_are_not_alone', 'HomeController@index');
 Route::get('/tutorials', 'HomeController@tutorials');
+
+
 
 // Confide routes
 Route::get('auth/create', 'AuthController@create');

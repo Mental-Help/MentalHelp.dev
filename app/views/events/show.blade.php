@@ -3,7 +3,7 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-6">
 				<h1>Support Group Title</h1>
 				<hr>
 				<p>Video chat used</p>
@@ -18,7 +18,23 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				<button class="btn btn-default">RSVP</button>
 			</div>
+
+        <div class="col-md-6">
+            <div class="well span1">
+                    <div>
+                        <img src="/img/default_profile_img.jpeg" alt="" class="img-circle img-responsive" />
+                    </div>
+                    <div>
+                        <h4>
+                            Bhaumik Patel</h4>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</div>
-	</div>
+
+
+
 </section>
 @stop
