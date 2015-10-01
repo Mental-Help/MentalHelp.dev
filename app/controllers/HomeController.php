@@ -24,12 +24,7 @@ class HomeController extends BaseController {
 	{
 		return View::make('tutorials');
 	}
-
-	public function eventsCreate()
-	{
-		return View::make('events.create');
-	}
-
+    
 	public function index()
 	{
         $eventquery = CalendarEvent::with('tags');
