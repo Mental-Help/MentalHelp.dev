@@ -28,6 +28,7 @@ Route::resource('users', 'UsersController');
 Route::get('/you_are_not_alone', 'HomeController@index');
 Route::get('/dropdown', 'HomeController@dropdown');
 Route::get('/tutorials', 'HomeController@tutorials');
+Route::get('/events/create', 'HomeController@eventsCreate');
 
 // Confide routes
 Route::get('auth/create', 'AuthController@create');

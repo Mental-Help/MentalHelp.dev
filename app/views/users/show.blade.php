@@ -1,1 +1,0 @@
-/vagrant/sites/mentalhelp.dev/app/views/users/show.blade.php

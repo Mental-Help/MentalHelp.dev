@@ -2,30 +2,6 @@
 
 @section('content')
 
-     {{--ADD STORY MODAL BEGIN--}}
-    <div class="modal fade bs-example-modal-lg" id="addStoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Share Your Story</h4>
-                </div>
-                <div class="modal-body">
-                    {{ Form::open() }}
-                        <div class="form-group">
-                            {{ Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Title'])}}
-                        </div>
-                        <div class="form-group">
-                            {{Form::textarea('story', null, ['class' => 'form-control', 'data-provide' => 'markdown', 'rows' => '10', 'placeholder' => 'Content Here'])}}
-                        </div>
-                        {{ Form::submit('Save', ['class' => 'btn btn-default save-btn']) }}
-                    {{ Form::close() }}
-                </div>
-            </div>
-        </div>
-    </div>
-    {{--ADD STORY MODAL END --}}
-
     <div class="container">
         <div class="col-md-12">
             <h1>Edit Profile</h1>
