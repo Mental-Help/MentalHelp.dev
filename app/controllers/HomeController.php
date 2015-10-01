@@ -30,19 +30,9 @@ class HomeController extends BaseController {
 		return View::make('profiles.edit');
 	}
 
-	public function showUserIndex()
-	{
-		return View::make('users.index');
-	}
-
 	public function dropdown()
 	{
 		return View::make('dropdown-title');
-	}
-
-	public function showTuts()
-	{
-		return View::make('tuts');
 	}
 
 	public function tutorials()
@@ -50,14 +40,22 @@ class HomeController extends BaseController {
 		return View::make('tutorials');
 	}
 
-	public function eventStory()
-	{
-		return View::make('events-stories');
-	}
-
 	public function index()
 	{
-		$search =
-		$event = CalendarEvent::where('tag', 'like', '%' . $search . '%');
+        $eventquery = CalendarEvent::with('tags');
+        $storyquery = UserStory::with('tags');
+
+		if(Input::has('tags')) {
+			$search = Input::get('tags');
+
+			$storyquery->where('is_public', '=', true)
+				->whereHas('tag', 'like', '%' . $search . '%');
+			$eventquery->whereHas('tag', 'like', '%' . $search . '%');
+		}
+
+        $events  = $eventquery->orderBy('updated_at')->paginate(3);
+        $stories = $storyquery->orderBy('updated_at')->paginate(3);
+
+        return View::make('you_are_not_alone')->with('events', $events)->with('stories', $stories);
 	}
 }

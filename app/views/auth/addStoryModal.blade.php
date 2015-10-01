@@ -11,7 +11,7 @@
                         {{ Form::open() }}
                             {{ Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Title'])}}
 
-                            {{Form::textarea('story', null, ['class' => 'form-control', 'data-provide' => 'markdown', 'rows' => '10', 'placeholder' => 'Content Here'])}}
+                            {{Form::textarea('body', null, ['class' => 'form-control', 'data-provide' => 'markdown', 'rows' => '10', 'placeholder' => 'Content Here'])}}
                         {{ Form::close() }}
                     </div>
                 {{ Form::close() }}
