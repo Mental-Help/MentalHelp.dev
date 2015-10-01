@@ -1,9 +1,5 @@
 @extends('layouts.master')
 
-<head>
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/StarPlugins/thumbelina/master/thumbelina.css"/> --}}
-</head>
-
 @section('content')
 <div class="container col-md-12">
     <div class="col-md-6">
