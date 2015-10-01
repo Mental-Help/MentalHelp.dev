@@ -44,12 +44,6 @@ class UsersController extends \BaseController {
 		return View::make('users.index')->with('users', $users);
 	}
 
-	public function create()
-	{
-		return View::make('users.create');
-
-	}
-
 	/**
 	 * Display the specified resource.
 	 * GET /users/{id}
