@@ -3,7 +3,7 @@
 class UserStoriesController extends \BaseController {
 
 	protected $entrustPerms = array(
-		'create'  => ['can_edit_own_posts', 'can_edit_another_users_posts'];
+		'create'  => ['can_edit_own_posts', 'can_edit_another_users_posts'],
 		'edit'    => ['can_edit_own_posts', 'can_edit_another_users_posts'],
 		'destroy' => 'can_edit_another_users_posts'
 	);
@@ -56,10 +56,6 @@ class UserStoriesController extends \BaseController {
 	public function store()
 	{
 		$story = new UserStory();
-		// validation succeeded, create and save the post
-		Log::info("User Story created successfully.");
-
-		Log::info("Log Message", array('context' => Input::all()));
 
 		return $this->validateAndSave($story);
 	}
@@ -132,17 +128,16 @@ class UserStoriesController extends \BaseController {
 	public function validateAndSave($story)
 	{
 		try {
-
-			$story->title	  = Input::get('title');
-			$story->body  	  = Input::get('body');
+			$story->title = Input::get('title');
+			$story->body = Input::get('body');
 			$story->is_public = Input::get('is_public');
 
 			$profile_id = Auth::user()->profile->id;
 			$story->profile_id = $profile_id;
 
-			Log::info('User Profile Created Successfully');
+			Log::info("User Story created successfully.");
 
-			Log::info('Log Message', array('context', Input::all()));
+			Log::info("Log Message", array('context' => Input::all()));
 
 			return Redirect::action('UserStoriesController@show', array($story->id));
 
@@ -156,5 +151,5 @@ class UserStoriesController extends \BaseController {
 			Log::info($e->getErrors()->toArray());
 			return Redirect::back()->withErrors($e->getErrors())->withInput();
 		}
-
+	}
 }
