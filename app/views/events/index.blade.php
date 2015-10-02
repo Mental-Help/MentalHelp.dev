@@ -22,7 +22,7 @@
 		<div class="col-md-4">
 	        <!-- Blog Search Well -->
 	        <div class="well">
-	            <h4>Blog Search</h4>
+	            <h4>Search Events</h4>
 	            <div class="input-group">
 		            <form class="search-input navbar-form navbar-right" method="GET" role="search" action="{{ action('CalendarEventsController@index') }}">
 				    	<div class="form-group">
