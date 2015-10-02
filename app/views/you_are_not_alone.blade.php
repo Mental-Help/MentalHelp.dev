@@ -1,5 +1,16 @@
 @extends('layouts.master')
 
+@section('style')
+    <style>
+        .slider-item {
+            display: block;
+            width: 580px;
+            height: 175px;
+            background-color: #000;
+        }
+    </style>
+@stop
+
 @section('content')
 <div class="container col-md-12">
     <div class="col-md-6">
@@ -7,7 +18,8 @@
         <div class="slider3" id="event-slider">
             <div class="thumbelina-but vert top">&#708;</div>
             <ul>
-                <li><div></div></li>
+                {{-- <li><img src="http://placehold.it/580x175"></li> --}}
+                <li><div class="slider-item"><p>This is working</p></div></li>
                 <li><img src="http://placehold.it/580x175"></li>
                 <li><img src="http://placehold.it/580x175"></li>
                 <li><img src="http://placehold.it/580x175"></li>
@@ -37,7 +49,7 @@
 @stop
 
 @section('script')
-    <script src="https://cdn.rawgit.com/StarPlugins/thumbelina/master/thumbelina.js"></script>
+    <script type="text/javascript" src="/js/thumbelina.js"></script>
     <script type="text/javascript">
         $(function(){
             
@@ -47,16 +59,11 @@
                 $fwdBut:$('#event-slider .bottom')   // Selector to bottom button.
             });
           
-        });
-
-        $(function(){
-            
             $('#story-slider').Thumbelina({
                 orientation:'vertical',         // Use vertical mode (default horizontal).
                 $bwdBut:$('#story-slider .top'),     // Selector to top button.
                 $fwdBut:$('#story-slider .bottom')   // Selector to bottom button.
             });
-          
         });
     </script>
 @stop

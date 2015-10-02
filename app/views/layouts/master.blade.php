@@ -40,8 +40,6 @@
         <script type="text/jacascript" src="/js/home_carousel.js"></script>
         <script type="text/javascript" src="/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.9.0/js/bootstrap-markdown.min.js"></script>
-        <script type="text/javascript" src="/js/slider.js"></script>
-        <script type="text/javascript" src="/js/thumbelina"></script>
         
         @yield('script')
     </body>
