@@ -329,8 +329,34 @@ footer {
   background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
   color: #fff; }
 
+.index-heading {
+  color: #00008B; }
+
+.index-title a {
+  color: #00008B; }
+
+.read-more {
+  color: #00A8E8; }
+
+.pagination li a {
+  color: #00008B; }
+
+.pagination .active span {
+  background-color: #00008B;
+  border-color: #00008B; }
+
 body {
   font-family: Merriweather, sans-serif;
   padding: 0; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px; }
+
+.btn {
+  color: #fff;
+  text-shadow: none;
+  background-image: linear-gradient(to bottom, #00A8E8 0, #00A8E8 100%); }
 
 /*# sourceMappingURL=main.css.map */
