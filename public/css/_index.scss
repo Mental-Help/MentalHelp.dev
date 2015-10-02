@@ -1,0 +1,32 @@
+.index-heading {
+	color: $dark-blue;
+}
+
+.index-title {
+	a {
+		color: $dark-blue;
+	}
+}
+
+.read-more {
+	color: $blue;
+}
+
+// Paginator
+
+.pagination{
+	li {
+		a {
+			color: $dark-blue;
+		}
+	}
+}
+
+.pagination {
+	.active {
+		span {
+			background-color: $dark-blue;
+    		border-color: $dark-blue;
+		}
+	}
+}
