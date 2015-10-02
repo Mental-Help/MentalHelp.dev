@@ -1,6 +1,13 @@
-.single-item {
-	width: 100%;
-	height: auto;
-	background-color: #DEDEDE;
-	margin: auto;
+.slider-item {
+    display: block;
+    width: 583px;
+    height: 175px;
+    padding: 15px;
+    margin: 5px 0;
+    // background-color: $blue-green;
+    color: #000;
+
+    p{
+    	margin: 10px 0;
+    }
 }

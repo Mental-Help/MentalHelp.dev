@@ -9,7 +9,7 @@
 			<h3 class="index-title"><a id="index-title" class="read-more" href="{{{ action('CalendarEventsController@show', $event->id) }}}">{{{ $event->title }}}</a></h3>
 			When: {{{ $event->start_time }}}</small><br>
 			<p>{{{ Str::words($event->description, 20)}}}
-			<a class="read-more" href="{{{ action('CalendarEventsController@show', $event->id) }}}">Read More</a>
+				<a class="read-more" href="{{{ action('CalendarEventsController@show', $event->id) }}}">Read More</a>
 			<p>
 
 	    @empty

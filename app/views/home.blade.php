@@ -180,7 +180,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="you_are_not_alone?tags=ptsd" class="portfolio-box">
+                    <a href="you_are_not_alone?tags=post-traumatic-stress-disorder" class="portfolio-box">
                         <img src="img/ptsd.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
