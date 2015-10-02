@@ -7,7 +7,7 @@
         <div class="slider3" id="event-slider">
             <div class="thumbelina-but vert top">&#708;</div>
             <ul>
-                <li><img src="http://placehold.it/580x175"></li>
+                <li><div></div></li>
                 <li><img src="http://placehold.it/580x175"></li>
                 <li><img src="http://placehold.it/580x175"></li>
                 <li><img src="http://placehold.it/580x175"></li>
