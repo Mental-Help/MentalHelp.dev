@@ -178,11 +178,15 @@ footer {
   width: 770px;
   height: 481px; }
 
-.single-item {
-  width: 100%;
-  height: auto;
-  background-color: #DEDEDE;
-  margin: auto; }
+.slider-item {
+  display: block;
+  width: 583px;
+  height: 175px;
+  padding: 15px;
+  margin: 5px 0;
+  color: #000; }
+  .slider-item p {
+    margin: 10px 0; }
 
 .form-background {
   height: auto;
@@ -215,12 +219,6 @@ footer {
   background-color: #00008B;
   border-color: #00008B; }
 
-.slider-item {
-  display: block;
-  width: 580px;
-  height: 175px;
-  background-color: #000; }
-
 /*
     Thumbelina Content Slider
     V1.0 Rev 1302190900
@@ -248,7 +246,6 @@ footer {
   white-space: nowrap;
   /* font-size:0 stop gaps between display-inline li elemets */
   /* Either do this, or remove all white space in HTML beween li elements */
-  font-size: 0;
   /* prevent annoying iPad cut/paste actions */
   -webkit-touch-callout: none;
   -webkit-user-select: none; }
