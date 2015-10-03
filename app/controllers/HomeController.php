@@ -47,4 +47,8 @@ class HomeController extends BaseController {
 
         return View::make('you_are_not_alone')->with('events', $events)->with('stories', $stories);
 	}
+	public function error()
+	{
+		return View::make('errors.404');
+	}
 }
