@@ -178,6 +178,47 @@ footer {
   width: 770px;
   height: 481px; }
 
+.slider-item {
+  display: block;
+  width: 583px;
+  height: 175px;
+  padding: 15px;
+  margin: 5px 0;
+  color: #000; }
+  .slider-item p {
+    margin: 10px 0; }
+
+.form-background {
+  height: auto;
+  margin: 3% auto;
+  border-radius: 4px;
+  padding: 15px; }
+
+.signup-redirect, .login-redirect {
+  float: left; }
+
+.login-btn, .submit-btn, .save-btn, .form-submit {
+  float: right;
+  width: 15%;
+  background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
+  color: #fff; }
+
+.index-heading {
+  color: #00008B; }
+
+.index-title a {
+  color: #00008B; }
+
+.read-more {
+  color: #00A8E8; }
+
+.pagination li a {
+  color: #00008B; }
+
+.pagination .active span {
+  background-color: #00008B;
+  border-color: #00008B; }
+
 /*
     Thumbelina Content Slider
     V1.0 Rev 1302190900
@@ -205,7 +246,6 @@ footer {
   white-space: nowrap;
   /* font-size:0 stop gaps between display-inline li elemets */
   /* Either do this, or remove all white space in HTML beween li elements */
-  font-size: 0;
   /* prevent annoying iPad cut/paste actions */
   -webkit-touch-callout: none;
   -webkit-user-select: none; }
@@ -308,45 +348,8 @@ footer {
   border-right: 1px solid #aaa;
   margin-bottom: 40px; }
 
-.single-item {
-  width: 100%;
-  height: auto;
-  background-color: #DEDEDE;
-  margin: auto; }
-
-.form-background {
-  height: auto;
-  margin: 3% auto;
-  border-radius: 4px;
-  padding: 15px; }
-
-.signup-redirect, .login-redirect {
-  float: left; }
-
-.login-btn, .submit-btn, .save-btn, .form-submit {
-  float: right;
-  width: 15%;
-  background-image: linear-gradient(to bottom, #57D1FF 0, #00A8E8 100%);
-  color: #fff; }
-
-.index-heading {
-  color: #00008B; }
-
-.index-title a {
-  color: #00008B; }
-
-.read-more {
-  color: #00A8E8; }
-
-.pagination li a {
-  color: #00008B; }
-
-.pagination .active span {
-  background-color: #00008B;
-  border-color: #00008B; }
-
 body {
-  font-family: Merriweather, sans-serif;
+  font-family: 'Merriweather, sans-serif';
   padding: 0; }
 
 .container {

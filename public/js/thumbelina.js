@@ -25,7 +25,7 @@
             orientData;              // Stores function calls and CSS attribute for horiz or vert mode.
         
         // Add thumblina CSS class, and create an inner wrapping container, within which the list will slide with overflow hidden.
-        $list.addClass('thumbelina').wrap('<div style="position:absolute;overflow:hidden;width:100%;height:100%;">');
+        $list.addClass('thumbelina').wrap('<div style="position:relative;overflow:hidden;width:100%;height:500px;">');
         // Create settings by merging user settings into defaults.
         settings = $.extend({}, $.fn.Thumbelina.defaults, settings);
         
