@@ -1,16 +1,5 @@
 @extends('layouts.master')
 
-@section('style')
-    <style>
-        .slider-item {
-            display: block;
-            width: 580px;
-            height: 175px;
-            background-color: #000;
-        }
-    </style>
-@stop
-
 @section('content')
 <div class="container col-md-12">
     <div class="col-md-6">
@@ -19,12 +8,19 @@
             <div class="thumbelina-but vert top">&#708;</div>
             <ul>
                 {{-- <li><img src="http://placehold.it/580x175"></li> --}}
-                <li><div class="slider-item"><p>This is working</p></div></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
+                <li>
+                    @forelse ($events as $event)
+                        <div class="slider-item">
+                                <h3 class="slider-title"><a class="read-more slider-title" href="{{{ action('CalendarEventsController@show', $event->id) }}}">{{{ $event->title }}}</a></h3>
+                                <p><small class="slider-time">When: {{{ $event->start_time }}}</small></p>
+                                <p class="slider-description">{{{ Str::words($event->description, 20)}}}
+                                    <a class="read-more" href="{{{ action('CalendarEventsController@show', $event->id) }}}">Read More</a>
+                                </p>
+                        </div>
+                    @empty
+                        <h3>There aren't any events to display at this time.</h3>
+                    @endforelse
+                </li>
             </ul>
             <div class="thumbelina-but vert bottom">&#709;</div>
         </div>
@@ -35,12 +31,20 @@
         <div class="slider3" id="story-slider">
             <div class="thumbelina-but vert top">&#708;</div>
             <ul>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
-                <li><img src="http://placehold.it/580x175"></li>
+                <li>
+                    @forelse ($stories as $story)
+                        <div class="slider-item">
+                            <h3 class="slider-title"><a id="slider-title" class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">{{{ $story->title }}}</a></h3>
+                            <p><small class="slider-time">By: {{{$story->profile->user->username}}} | 
+                            Date Created: {{{ $story->created_at }}}</small></p>
+                            <p class="slider-time">{{{ Str::words($story->body, 20)}}}
+                                <a class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">Read More</a>
+                            <p>
+                        </div>
+                    @empty
+                        <h3>There aren't any stories to display at this time.</h3>
+                    @endforelse
+                </li>
             </ul>
             <div class="thumbelina-but vert bottom">&#709;</div>
         </div>
