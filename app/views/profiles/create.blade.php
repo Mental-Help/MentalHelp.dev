@@ -31,15 +31,15 @@
                     </div>
 
                     <div class="col-md-4">
-                        {{Form::label('illnesses', "Illnesses:")}}
-                        <div>
-                            @foreach (Config::get('illnesses') as $key => $illness)
-                                <div class="form-group">
-                                    {{ Form::checkbox("illnesses[]", $illness) }}
-                                    {{ Form::label('illnesses[]', $illness) }}
-                                </div>
-                            @endforeach
-                        </div>
+                        {{-- {{Form::label('illnesses', "Illnesses:")}} --}}
+                        {{-- <div> --}}
+                            {{-- @foreach (Config::get('illnesses') as $key => $illness) --}}
+                                {{-- <div class="form-group"> --}}
+                                    {{-- {{ Form::checkbox("illnesses[]", $illness) }} --}}
+                                    {{-- {{ Form::label('illnesses[]', $illness) }} --}}
+                                {{-- </div> --}}
+                            {{-- @endforeach --}}
+                        {{-- </div> --}}
                     </div>
                 </div>
                 <div class="col-md-8">
