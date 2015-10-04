@@ -35,8 +35,7 @@
                     @forelse ($stories as $story)
                         <div class="slider-item">
                             <h3 class="slider-title"><a id="slider-title" class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">{{{ $story->title }}}</a></h3>
-                            <p><small class="slider-time">By: {{{$story->profile->user->username}}} | 
-                            Date Created: {{{ $story->created_at }}}</small></p>
+                            <p><small class="slider-time">Date Created: {{{ $story->created_at }}}</small></p>
                             <p class="slider-time">{{{ Str::words($story->body, 20)}}}
                                 <a class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">Read More</a>
                             <p>
