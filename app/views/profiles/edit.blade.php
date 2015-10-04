@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
     <div class="container">
         <div class="col-md-12">
             <h1>Edit Profile</h1>
@@ -68,8 +67,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
 @stop
 
 @section('script')
