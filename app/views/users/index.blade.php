@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class='col-md-8'>
-                @foreach(User::all() as $user)
+                @foreach($users as $user)
                 <div class="col-xs-3 col-md-5 text-center">
                     <img class="img-circle img-center img-thumbnail" src="{{ $user->profile->image_url }}" alt="">
                     <h3>{{ $user->username }}

@@ -5,7 +5,7 @@
 <div class="container col-md-12">
     <div class="col-md-3"></div>
     <div class="form-background col-md-6">
-        {{Form::open()}}
+        {{ Form::open(array('action' => 'CalendarEventsController@store')) }}
             <div class="row">
                 {{ Form::label('title', 'Title') }}
                 <div class="form-group col-md-12" id="event-title">
@@ -19,13 +19,6 @@
                 </div>
                 <div class="form-group col-md-6">
                     {{ Form::text('end_time', null, ['class' => 'form-control time-form end-time-form', 'id' => 'endsAtDateTimePicker_dark', 'placeholder' => 'End Time'])}}
-                </div>
- 
-            </div>  
-            <div class="row">
-                    {{Form::label('video_service', 'Video Service')}}<br>
-                <div class="col-md-6">
-                    {{Form::text('video_service', null, ['class' => 'form-control', 'placeholder' => 'Title'])}}
                 </div>
             </div>
             <div class="row">
