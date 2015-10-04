@@ -9,7 +9,7 @@
             <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="300">
 
 
-        @for ($profile as $profile)
+        @for ($profiles as $profile)
             @if (isset($profile->facebook_url))
                 <p>{{ $profile->facebook_url }}</p>
             @elseif (isset($profile->twitter_url))
@@ -18,6 +18,7 @@
                 <p>{{$profile->instagram_url}}</p>
             @else
                 <p>User does not have social media links to share.</p>
+            @endif
 
             {{-- <p>Illnesses</p> --}}
         </div>
