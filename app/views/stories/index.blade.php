@@ -7,7 +7,13 @@
 		<div class="col-md-8">
 		@forelse ($stories as $story)
 			<h3 class="index-title"><a id="index-title" class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">{{{ $story->title }}}</a></h3>
-			<small>By: {{{$story->profile->user->username}}} | 
+			<small>	@if (isset($story->profile->user->first_name) && isset($story->profile->user->last_name))
+						By: {{{ $story->profile->user->first_name }}} {{{ $story->profile->user->last_name }}} | 
+					@elseif (isset($story->profile->user->username))
+						By: {{{ $story->profile->user->username }}} | 
+					@else
+						By: Anonymous
+					@endif
 			Date Created: {{{ $story->created_at }}}</small><br>
 			<p>{{{ Str::words($story->body, 20)}}}
 			<a class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">Read More</a>

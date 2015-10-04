@@ -7,7 +7,13 @@
 		<hr>
 
 		<div class="col-md-8">
-			<small>By: | {{{ $story->profile->user->username }}}
+			<small>	@if (isset($story->profile->user->first_name) && isset($story->profile->user->last_name))
+						By: {{{ $story->profile->user->first_name }}} {{{ $story->profile->user->last_name }}} | 
+					@elseif (isset($story->profile->user->username))
+						By: {{{ $story->profile->user->username }}} | 
+					@else
+						By: Anonymous
+					@endif
 			Date Created: {{{ $story->created_at }}}</small><br>
 			<p>{{{ $story->body }}}</p>
 

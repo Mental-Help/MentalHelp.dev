@@ -11,10 +11,12 @@
                 @foreach($users as $user)
                 <div class="col-xs-3 col-md-5 text-center">
                     <img class="img-circle img-center img-thumbnail" src="{{ $user->profile->image_url }}" alt="">
-                    @if (isset($user->username))
-                        <h4>{{$user->username}}</h4>
+                    @if (isset($user->first_name) && isset($user->last_name))
+                        <h4>{{{ $user->first_name }}} {{{ $user->last_name }}}</h4>
+                    @elseif (isset($user->username))
+                        <h4>{{{ $user->username }}}</h4>
                     @else
-                        <h4>{{ $user->first_name }} {{ $user->last_name}}</h4>
+                        <h4>Anonymous</h4>
                     @endif
                 </div>
                 @endforeach

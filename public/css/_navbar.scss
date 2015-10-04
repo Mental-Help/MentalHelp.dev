@@ -1,6 +1,9 @@
 // NavBar ----------------------------------------------------------------
 .navbar {
     margin: 0;
+    text-transform: uppercase;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 700;
 }
 
 .dropdown:hover .dropdown-menu {
