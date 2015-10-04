@@ -184,9 +184,13 @@ footer {
   height: 175px;
   padding: 15px;
   margin: 5px 0;
+  background-color: rgba(61, 214, 208, 0.25);
   color: #000; }
   .slider-item p {
-    margin: 10px 0; }
+    overflow: auto;
+    white-space: pre-line; }
+  .slider-item .read-more {
+    color: #00008B; }
 
 .form-background {
   height: auto;
@@ -349,7 +353,7 @@ footer {
   margin-bottom: 40px; }
 
 body {
-  font-family: 'Merriweather, sans-serif';
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
   padding: 0; }
 
 .container {
