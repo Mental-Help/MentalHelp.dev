@@ -7,11 +7,15 @@
             {{ Form::open() }}
                 <div class="col-md-4">
                     <div>
-                        {{Form::file('image')}}
+                        {{Form::file('image_url')}}
                     </div>
 
                     <div>
                         {{Form::text('username', null, ['class' => 'form-control', 'placeholder' => 'Display Name'])}}
+                    </div>
+
+                    <div>
+                        {{Form::text('public_email', null, ['class' => 'form-control', 'placeholder' => 'Public Email'])}}
                     </div>
 
                     <div>
@@ -52,19 +56,17 @@
                         <div>
                             <button class="btn btn-default" data-toggle="modal" data-target="#addStoryModal" data-dismiss="modal">Add Story <i class="fa fa-plus-circle"></i></button>
                         </div>
-                        <div class="individual-story well">
-                            {{-- @foreach --}}
-                            <h3>Title</h3>
-                            <p><small>Date Created: </small></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <button class="btn btn-primary story-btn edit-btn">Edit <i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger story-btn delete-btn">Delete <i class="fa fa-trash-o"></i></button>
-                        </div>
+                        @forelse ($stories as $story)
+                            <div class="individual-story well">
+                                    <h3>{{ $story->title }}</h3>
+                                    <p><small class="slider-time">Date Created: {{{ $story->created_at }}}</small></p>
+                                    <p>{{ $story->body }}</p>
+                                    <button class="btn btn-primary story-btn edit-btn">Edit <i class="fa fa-pencil"></i></button>
+                                    <button class="btn btn-danger story-btn delete-btn">Delete <i class="fa fa-trash-o"></i></button>
+                            </div>
+                        @empty
+                            <h3>this user does not have any stories to share at this time.</h3>
+                        @endforelse
                     </div>
                 </div>
             </div>
