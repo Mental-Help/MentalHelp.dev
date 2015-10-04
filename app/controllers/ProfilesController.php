@@ -157,7 +157,7 @@ class ProfilesController extends BaseController {
 					}
 					$profile->facebook_url 	   = Input::get('facebook_url');
 					$profile->twitter_url  	   = Input::get('twitter_url');
-					$profile->instagram_url    = Input::get('instgram_url');
+					$profile->instagram_url    = Input::get('instagram_url');
 				} else {
 					$profile->is_public 	   = Input::get('is_public');
 					$profile->can_be_contacted = 'false';
