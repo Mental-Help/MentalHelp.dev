@@ -26,7 +26,7 @@
                 <div class="well">
                     <h4>Search Users</h4>
                     <div class="input-group">
-                        <form class="search-input navbar-form navbar-right" method="GET" role="search" action="{{ action('UserStoriesController@index') }}">
+                        <form class="search-input navbar-form navbar-right" method="GET" role="search" action="{{ action('UserController@index') }}">
                             <div class="form-group">
                                 <input name="search" type="text" class="form-control" placeholder="Search">
                             </div>
