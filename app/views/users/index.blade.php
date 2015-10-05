@@ -4,7 +4,11 @@
     <div class="container">
         <!-- Team Members Row -->
         <h1>Scroll through our Users</h1>
-        <button class="btn btn-default visitor-add-btn">Write Your Story</button>
+        @if (Auth::check())
+            <p></p>
+        @else
+            <button class="btn btn-default visitor-add-btn">Sign Up <i class="fa fa-plus"></i></button>
+        @endif
         <hr>
 
         <div class="row">
