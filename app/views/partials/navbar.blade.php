@@ -15,13 +15,13 @@
 
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="{{ action('CalendarEventsController@index') }}">Find Support Groups</a>
+                    <a class="nav-direct-link" href="{{ action('CalendarEventsController@index') }}">Find Support Groups</a>
                 </li>  
-                <li class="dropdown">
-                    <a href="{{ action('UserStoriesController@index') }}">Browse Stories</a>
+                <li>
+                    <a class="nav-direct-link" href="{{ action('UserStoriesController@index') }}">Browse Stories</a>
                 </li>
-                <li class="dropdown">
-                    <a href="{{ action('UsersController@index') }}">Find Users</a>
+                <li>
+                    <a class="nav-direct-link" href="{{ action('UsersController@index') }}">Find Users</a>
                 </li>
             </ul>
 
