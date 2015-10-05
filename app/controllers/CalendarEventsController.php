@@ -80,6 +80,7 @@ class CalendarEventsController extends \BaseController {
 
 			App::abort(404);
 		}
+
 		return View::make('events.show')->with('event', $event);
 	}
 
