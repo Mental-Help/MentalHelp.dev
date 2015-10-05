@@ -30,9 +30,11 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">My Profile</a></li>
-                            <li><a href="#">Create an Event</a></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="{{ action('usersController@edit') }}">My Profile</a></li>
+                            <li><a href="{{ action('ProfilesController@show') }}">My Profile</a></li>
+                            <li><a href="{{ action('CalendarEventsController@create') }}">Create an Event</a></li>
+                            <li><a href="{{ action('UserStoriesController@create') }}">Add Story</a></li>
+                            <li><a href="{{ action('AuthController@logout') }}">Logout</a></li>
                         </ul>
                     </li>
                 @else
