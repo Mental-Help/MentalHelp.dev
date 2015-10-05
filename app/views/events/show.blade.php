@@ -18,8 +18,7 @@
                         <img src="/img/default_profile_img.jpeg" alt="" class="img-circle img-responsive" />
                     </div>
                     <div>
-                        <h4>
-                            Bhaumik Patel</h4>
+                        <h4></h4>
                         
                         </div>
                     </div>

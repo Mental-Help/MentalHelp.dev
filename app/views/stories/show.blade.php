@@ -7,7 +7,13 @@
 		<hr>
 
 		<div class="col-md-8">
-			<small>By: | {{{ $story->profile->user->username }}}
+			<small>	@if (isset($story->profile->user->first_name) && isset($story->profile->user->last_name))
+						By: {{{ $story->profile->user->first_name }}} {{{ $story->profile->user->last_name }}} | 
+					@elseif (isset($story->profile->user->username))
+						By: {{{ $story->profile->user->username }}} | 
+					@else
+						By: Anonymous
+					@endif
 			Date Created: {{{ $story->created_at }}}</small><br>
 			<p>{{{ $story->body }}}</p>
 
@@ -33,11 +39,6 @@
 				    </form>
 	            </div>
 	            <!-- /.input-group -->
-	        </div>
-	        <!-- Side Widget Well -->
-	        <div class="well">
-	            <h4>Tags</h4>
-	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
 	        </div>
 	    </div>
 	</div>
