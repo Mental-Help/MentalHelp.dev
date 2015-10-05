@@ -14,14 +14,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="{{ action('UserStoriesController@index') }}">Browse Stories</a>
+                <li>
+                    <a class="nav-direct-link" href="{{ action('CalendarEventsController@index') }}">Find Support Groups</a>
+                </li>  
+                <li>
+                    <a class="nav-direct-link" href="{{ action('UserStoriesController@index') }}">Browse Stories</a>
                 </li>
-                <li class="dropdown">
-                    <a href="{{ action('UsersController@index') }}">Find Users</a>
-                </li>
-                <li class="dropdown">
-                    <a href="{{ action('CalendarEventsController@index') }}">Find Support Groups</a>
+                <li>
+                    <a class="nav-direct-link" href="{{ action('UsersController@index') }}">Find Users</a>
                 </li>
             </ul>
 
@@ -30,11 +30,11 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ action('ProfilesController@show') }}">My Profile</a></li>
-                            <li><a href="{{ action('ProfilesController@edit') }}">Edit My Profile</a></li>
-                            <li><a href="{{ action('CalendarEventsController@create') }}">Create an Event</a></li>
-                            <li><a href="{{ action('UserStoriesController@create') }}">Add Story</a></li>
-                            <li><a href="{{ action('AuthController@logout') }}">Logout</a></li>
+                            <li><a class="login-dropdown" href="{{ action('ProfilesController@show') }}">My Profile</a></li>
+                            <li><a class="login-dropdown" href="{{ action('ProfilesController@edit') }}">Edit My Profile</a></li>
+                            <li><a class="login-dropdown" href="{{ action('CalendarEventsController@create') }}">Create an Event</a></li>
+                            <li><a class="login-dropdown" href="{{ action('UserStoriesController@create') }}">Add Story</a></li>
+                            <li><a class="login-dropdown" href="{{ action('AuthController@logout') }}">Logout</a></li>
                         </ul>
                     </li>
                 @else

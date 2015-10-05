@@ -32,7 +32,7 @@
         <div class="col-md-4">
             <!-- Blog Search Well -->
             <div class="well">
-                <h4>Search Events</h4>
+                <h4>Search Users</h4>
                 <div class="input-group">
                     <form class="search-input navbar-form navbar-right" method="GET" role="search" action="{{ action('UsersController@index') }}">
                         <div class="form-group">
