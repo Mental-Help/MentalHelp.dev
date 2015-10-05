@@ -106,7 +106,7 @@
   border-radius: 4px;
   padding: 10px;
   margin: 10px 0;
-  height: auto; }
+  height: 250px; }
 
 .story-btn {
   float: right; }
@@ -118,6 +118,15 @@
 .delete-btn {
   background-image: linear-gradient(to bottom, #FF8181 0, #f00 100%);
   border-color: #fff; }
+
+.social-media-links {
+  width: 300px;
+  text-align: center;
+  margin: 10px 0; }
+  .social-media-links a {
+    color: #00008B; }
+  .social-media-links i {
+    margin: 0 5px; }
 
 .dropdown-featurette-title {
   margin: 25px 0 50px 25px; }
