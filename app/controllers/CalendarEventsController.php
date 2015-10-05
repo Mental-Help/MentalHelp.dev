@@ -80,7 +80,8 @@ class CalendarEventsController extends \BaseController {
 
 			App::abort(404);
 		}
-
+		$event->start_time = $event->start_time->format('D, d M Y H:i:s');
+		$event->end_time = $event->end_time->format('D, d M Y H:i:s');
 		return View::make('events.show')->with('event', $event);
 	}
 
