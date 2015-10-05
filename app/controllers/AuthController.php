@@ -43,9 +43,9 @@ class AuthController extends Controller
                     }
                 );
             }
-            if(Input::get('role_select') == 'storytellers') {
+            if(Input::get('role_select') == 'M') {
                 $userRole = Role::where('name', 'storytellers')->firstOrFail();
-            } else if(Input::get('role_select') == 'advocates') {
+            } else if(Input::get('role_select') == 'C') {
                 $userRole = Role::where('name', 'advocates')->firstOrFail();
             }
 
