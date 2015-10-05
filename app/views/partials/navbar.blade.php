@@ -31,8 +31,7 @@
                         <a href="#" class="dropdown-toggle signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">My Profile</a></li>
-                            <li><a href="#">My Groups</a></li>
-                            <li><a href="#">My Stories</a></li>
+                            <li><a href="#">Create an Event</a></li>
                             <li><a href="#">Logout</a></li>
                         </ul>
                     </li>

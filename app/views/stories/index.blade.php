@@ -3,7 +3,11 @@
 @section('content')
 	<div class="container">
 		<h1 class="index-heading">All Stories</h1>
-		<button class="btn btn-default visitor-add-btn">Write Your Story</button>
+		@if (Auth::check())
+            <button class="btn btn-default visitor-add-btn">Write Your Story <i class="fa fa-pencil"></i></button>
+        @else
+            <button class="btn btn-default visitor-add-btn">Write Your Story <i class="fa fa-pencil"></i></button>
+        @endif
 		<hr>
 		<div class="col-md-8">
 			@forelse ($stories as $story)
