@@ -4,7 +4,7 @@
 	<div class="container">
 		<h1 class="index-heading">All Events</h1>
         @if (Auth::check())
-            <button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button>
+            <a href="{{ action('CalendarEventsController@create')}} "><button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button></a>
         @else
             <button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button>
         @endif
