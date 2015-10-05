@@ -4,9 +4,9 @@
 	<div class="container">
 		<h1 class="index-heading">All Stories</h1>
 		@if (Auth::check())
-            <button class="btn btn-default visitor-add-btn">Write Your Story <i class="fa fa-pencil"></i></button>
+            <a href="{{ action('UserStoriesController@create') }}"><button class="btn btn-default visitor-add-btn">Write Your Story <i class="fa fa-pencil"></i></button></a>
         @else
-            <button class="btn btn-default visitor-add-btn">Write Your Story <i class="fa fa-pencil"></i></button>
+            <a href="{{ action('AuthController@login') }}"><button class="btn btn-default visitor-add-btn">Write Your Story <i class="fa fa-pencil"></i></button></a>
         @endif
 		<hr>
 		<div class="col-md-8">

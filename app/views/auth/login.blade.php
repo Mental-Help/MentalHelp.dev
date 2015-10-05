@@ -2,11 +2,9 @@
 
 @section('content')
     <div class="container">
-        <div class=" panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title" align="center">Login</h3>
-            </div>
-            <div class="panel-body">
+            <h3 align="center">Login</h3>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
                 {{ Form::open(array('action' => 'AuthController@doLogin')) }}
                     <div class="form-group">
                         {{ Form::label('email', 'Email') }}
@@ -20,9 +18,10 @@
                 {{ Form::close() }}
                 <div class="signup-redirect">
                     Not a member yet?
-                    <a href="{{ action('AuthController@create') }}">Sign Up</a>
+                    <a href="{{ action('AuthController@create') }}"><button class="btn btn-default">Sign Up</button></a>
                 </div>
             </div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 @stop
