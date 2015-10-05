@@ -17,8 +17,11 @@
 .navbar-nav .dropdown .dropdown-toggle {
   color: #fff; }
 
-.navbar-default .navbar-nav li a {
+.navbar-default .navbar-nav > li > a {
   color: #fff; }
+
+.login-dropdown {
+  color: #00008B; }
 
 /*CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

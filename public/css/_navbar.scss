@@ -27,16 +27,14 @@
     }
 }
 
-.navbar-default .navbar-nav{
-    li{
-        a{
-            color: #fff;
-        }
-    }
+// .nav-direct-link{
+//     color: #fff;
+// }
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
 }
 
-// .navbar-default .navbar-nav {
-    // .signin {
-    //     color: #fff;
-    // }
-// }
+.login-dropdown {
+    color: $dark-blue;
+}

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container col-md-12">
     <div class="col-md-6">
-        <h2>Events</h2>
+        <h2>Support Groups</h2>
         <div class="slider3" id="event-slider">
             <div class="thumbelina-but vert top">&#708;</div>
             <ul>

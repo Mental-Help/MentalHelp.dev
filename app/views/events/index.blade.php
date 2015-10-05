@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container">
-		<h1 class="index-heading">All Events</h1>
+		<h1 class="index-heading">All Support Groups</h1>
         @if (Auth::check())
             <a href="{{ action('CalendarEventsController@create')}} "><button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button></a>
         @else
