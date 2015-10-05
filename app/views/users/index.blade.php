@@ -2,17 +2,20 @@
 
 @section('content')
     <div class="container">
+        <!-- Team Members Row -->
         <h1>Scroll through our Users</h1>
         <button class="btn btn-default visitor-add-btn">Write Your Story</button>
         <hr>
-        <div class='col-md-8'>
+
+        <div class="row">
+            <div class='col-md-8'>
             @foreach($users as $user)
-            <div class="col-md-6 text-center">
-                <a id="index-title" class="read-more" href="{{{ action('ProfilesController@show', $user->id) }}}"><img class="img-circle img-center img-thumbnail" src="{{ $user->profile->image_url }}" alt=""></a>
+                    <div class="col-xs-3 col-md-5 text-center">
+                    <img class="img-circle img-center img-thumbnail" src="{{ $user->profile->image_url }}" alt="">
                 @if (isset($user->first_name) && isset($user->last_name))
-                    <h4>{{{ $user->first_name }}} {{{ $user->last_name }}}</h4>
+                    <a href="{{ action('ProfilesController@show', $user->id) }}"><h4>{{{ $user->first_name }}} {{{ $user->last_name }}}</h4></a>
                 @elseif (isset($user->username))
-                    <h4>{{{ $user->username }}}</h4>
+                    <a href="{{ action('ProfilesController@show', $user->id) }}"><h4>{{{ $user->username }}}</h4></a>
                 @else
                     <h4>Anonymous</h4>
                 @endif
