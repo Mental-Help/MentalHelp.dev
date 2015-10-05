@@ -3,26 +3,27 @@
 @section('content')
 	<div class="container">
 		<h1 class="index-heading">All Stories</h1>
+		<button class="btn btn-default visitor-add-btn">Write Your Story</button>
 		<hr>
 		<div class="col-md-8">
-		@forelse ($stories as $story)
-			<h3 class="index-title"><a id="index-title" class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">{{{ $story->title }}}</a></h3>
-			<small>	@if (isset($story->profile->user->first_name) && isset($story->profile->user->last_name))
-						By: {{{ $story->profile->user->first_name }}} {{{ $story->profile->user->last_name }}} | 
-					@elseif (isset($story->profile->user->username))
-						By: {{{ $story->profile->user->username }}} | 
-					@else
-						By: Anonymous
-					@endif
-			Date Created: {{{ $story->created_at }}}</small><br>
-			<p>{{{ Str::words($story->body, 20)}}}
-			<a class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">Read More</a>
-			<p>
+			@forelse ($stories as $story)
+				<h3 class="index-title"><a id="index-title" class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">{{{ $story->title }}}</a></h3>
+				<small>	@if (isset($story->profile->user->first_name) && isset($story->profile->user->last_name))
+							By: {{{ $story->profile->user->first_name }}} {{{ $story->profile->user->last_name }}} | 
+						@elseif (isset($story->profile->user->username))
+							By: {{{ $story->profile->user->username }}} | 
+						@else
+							By: Anonymous
+						@endif
+				Date Created: {{{ $story->created_at }}}</small><br>
+				<p>{{{ Str::words($story->body, 20)}}}
+				<a class="read-more" href="{{{ action('UserStoriesController@show', $story->id) }}}">Read More</a>
+				<p>
 
-	    @empty
-	        <h3>There aren't any stories to display at this time.</h3>
-	    @endforelse
-		{{ $stories->appends(array('search' => Input::get('search')))->links() }}
+		    @empty
+		        <h3>There aren't any stories to display at this time.</h3>
+		    @endforelse
+			{{ $stories->appends(array('search' => Input::get('search')))->links() }}
 		</div>
 
 		<div class="col-md-4">
@@ -38,11 +39,6 @@
 				    </form>
 	            </div>
 	            <!-- /.input-group -->
-	        </div>
-	        <!-- Side Widget Well -->
-	        <div class="well">
-	            <h4>Tags</h4>
-	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
 	        </div>
 	    </div>
 	</div>

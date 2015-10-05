@@ -25,11 +25,11 @@
                 </div>
                 @foreach($profile->userStories as $story)
                     <div class="individual-story well">
-                            <h3>{{ $story->title }}</h3>
-                            <p><small class="slider-time">Date Created: {{ $story->created_at }}</small></p>
-                            <p>{{ $story->body }}</p>
-                            <button class="btn btn-primary story-btn edit-btn">Edit <i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger story-btn delete-btn">Delete <i class="fa fa-trash-o"></i></button>
+                        <h3>{{ $story->title }}</h3>
+                        <p><small class="slider-time">Date Created: {{ $story->created_at }}</small></p>
+                        <p>{{ $story->body }}</p>
+                        <button class="btn btn-primary story-btn edit-btn">Edit <i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-danger story-btn delete-btn">Delete <i class="fa fa-trash-o"></i></button>
                     </div>
                 @endforeach
             </div>
