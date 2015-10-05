@@ -11,23 +11,23 @@
                     </div>
 
                     <div>
-                        {{Form::text('username', null, ['class' => 'form-control', 'placeholder' => 'Display Name'])}}
+                        {{Form::text('username', Input::old('username'), ['class' => 'form-control', 'placeholder' => 'Display Name'])}}
                     </div>
 
                     <div>
-                        {{Form::text('public_email', null, ['class' => 'form-control', 'placeholder' => 'Public Email'])}}
+                        {{Form::text('public_email', Input::old('public_email'), ['class' => 'form-control', 'placeholder' => 'Public Email'])}}
                     </div>
 
                     <div>
-                        {{Form::text('facebook_url', null, ['class' => 'form-control', 'placeholder' => 'Facebook'])}}
+                        {{Form::text('facebook_url', Input::old('facebook_url'), ['class' => 'form-control', 'placeholder' => 'Facebook'])}}
                     </div>
 
                     <div>
-                        {{Form::text('twitter_url', null, ['class' => 'form-control', 'placeholder' => 'Twitter'])}}
+                        {{Form::text('twitter_url', Input::old('twitter_url'), ['class' => 'form-control', 'placeholder' => 'Twitter'])}}
                     </div>
 
                     <div>
-                        {{Form::text('instagram_url', null, ['class' => 'form-control', 'placeholder' => 'Instagram'])}}
+                        {{Form::text('instagram_url', Input::old('instagram_url'), ['class' => 'form-control', 'placeholder' => 'Instagram'])}}
                     </div>
 
                     <div class="col-md-4">
@@ -46,7 +46,7 @@
                     <div class="about-me-div">
                         <h2>About Me:</h2>
                         <div>
-                            {{Form::textarea('about_me', null, ['class' => 'form-control', 'placeholder' => 'About Me'])}}
+                            {{Form::textarea('about_me', Input::old('about_me'), ['class' => 'form-control', 'placeholder' => 'About Me'])}}
                         </div>
                     </div>
             {{ Form::close() }}

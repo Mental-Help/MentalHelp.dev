@@ -9,22 +9,22 @@
             <div class="row">
                 {{ Form::label('title', 'Title') }}
                 <div class="form-group col-md-12" id="event-title">
-                    {{ Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Event Title']) }}
+                    {{ Form::text('title', Input::old('title'), ['class' => 'form-control', 'placeholder' => 'Event Title']) }}
                 </div>
             </div>
             <div class="row">
                 {{ Form::label('when', 'When') }}<br>
                 <div class="form-group col-md-6">
-                    {{ Form::text('start_time', null, ['class' => 'form-control time-form start-time-form', 'id' => 'startsAtDateTimePicker_dark', 'placeholder' => 'Start Time'])}}
+                    {{ Form::text('start_time', Input::old('start_time'), ['class' => 'form-control time-form start-time-form', 'id' => 'startsAtDateTimePicker_dark', 'placeholder' => 'Start Time'])}}
                 </div>
                 <div class="form-group col-md-6">
-                    {{ Form::text('end_time', null, ['class' => 'form-control time-form end-time-form', 'id' => 'endsAtDateTimePicker_dark', 'placeholder' => 'End Time'])}}
+                    {{ Form::text('end_time', Input::old('end_time'), ['class' => 'form-control time-form end-time-form', 'id' => 'endsAtDateTimePicker_dark', 'placeholder' => 'End Time'])}}
                 </div>
             </div>
             <div class="row">
                 {{ Form::label('description', 'Description') }}
                 <div class="form-group col-md-12" id="description">
-                    {{ Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Description']) }}
+                    {{ Form::textarea('description', Input::old('description'), ['class' => 'form-control', 'placeholder' => 'Description']) }}
                 </div>
             </div>
             {{ Form::submit('Save', ['class' => 'btn btn-default form-control form-submit', 'id' => 'save']) }}
