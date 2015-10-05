@@ -53,7 +53,7 @@ App::missing(function($exception)
 App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $exception)
 {
     // do whatever here. 404, flash message, etc.
-    return Redirect::home();
+    return Response::view('errors.404', array(), 404);
 });
 
 /*
