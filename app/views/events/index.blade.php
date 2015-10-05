@@ -3,7 +3,11 @@
 @section('content')
 	<div class="container">
 		<h1 class="index-heading">All Events</h1>
-        <button class="btn btn-default visitor-add-btn">Write Your Story</button>
+        @if (Auth::check())
+            <button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button>
+        @else
+            <button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button>
+        @endif
 		<hr>
 		<div class="col-md-8">
 			@forelse ($events as $event)
