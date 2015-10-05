@@ -39,7 +39,7 @@ class UsersController extends \BaseController {
 			});
 		}
 
-		$users = $query->orderBy('updated_at')->paginate(16);
+		$users = $query->orderBy('updated_at')->paginate(8);
 
 		return View::make('users.index')->with('users', $users);
 	}
