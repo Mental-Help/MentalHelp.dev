@@ -1,6 +1,7 @@
 <?php
 
 	use Esensi\Model\SoftModel;
+	use Carbon\Carbon;
 
 class CalendarEvent extends SoftModel {
 	protected $table = 'calendar_events';
