@@ -4,6 +4,7 @@
 	<div class="col-md-12">
         <div class="col-md-3"></div>
         <div class="form-background col-md-6">
+            <h3 align="center">Sign Up</h3>
             {{ Form::open(array('action' => 'AuthController@store')) }}
                 <div class="row">
                     <div class="form-group col-md-6">
@@ -48,7 +49,7 @@
                 </div>
                 <div class="login-redirect">
                     Already a member?
-                    <a href="{{ action('AuthController@login') }}">Login</a>
+                    <a href="{{ action('AuthController@login') }}"><button class="btn btn-default">Login</button></a>
                 </div>
                 {{ Form::submit('Submit', ['class' => 'btn btn-default submit-btn']) }}
             {{ Form::close() }}

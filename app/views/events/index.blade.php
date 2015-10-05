@@ -6,7 +6,7 @@
         @if (Auth::check())
             <a href="{{ action('CalendarEventsController@create')}} "><button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button></a>
         @else
-            <button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button>
+            <a href="{{ action('AuthController@login') }}"><button class="btn btn-default visitor-add-btn">Create an Event <i class="fa fa-globe"></i></button></a>
         @endif
 		<hr>
 		<div class="col-md-8">

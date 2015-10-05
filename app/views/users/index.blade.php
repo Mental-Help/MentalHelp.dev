@@ -7,7 +7,7 @@
         @if (Auth::check())
             <p></p>
         @else
-            <button class="btn btn-default visitor-add-btn">Sign Up <i class="fa fa-plus"></i></button>
+            <a href="{{ action('AuthController@create') }}"><button class="btn btn-default visitor-add-btn">Sign Up <i class="fa fa-plus"></i></button></a>
         @endif
         <hr>
 
