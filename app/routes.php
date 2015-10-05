@@ -29,7 +29,7 @@ Route::get('events/attendees/{id}', 'CalendarEventsController@rsvp');
 Route::resource('events', 'CalendarEventsController');
 
 //routes made for front-end purposes
-Route::get('/', 'HomeController@showHome');
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showHome']);
 Route::get('/you_are_not_alone', 'HomeController@index');
 Route::get('/tutorials', 'HomeController@tutorials');
 
