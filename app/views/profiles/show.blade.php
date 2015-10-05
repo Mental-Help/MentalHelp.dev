@@ -13,7 +13,12 @@
         </h1>
 
         @if (Auth::check())
-            <a href="{{ action('ProfilesController@edit') }}"><button>Edit Profile <i class="fa fa-pencil"></i></button></a>
+
+            @if(isset($profile->about_me))
+                <a href="{{ action('ProfilesController@edit') }}"><button>Edit Profile <i class="fa fa-pencil"></i></button></a>
+            @else
+                <a href="{{ action('ProfilesController@create') }}"><button>Edit Profile <i class="fa fa-pencil"></i></button></a>
+            @endif
         @endif
         <hr>
 
