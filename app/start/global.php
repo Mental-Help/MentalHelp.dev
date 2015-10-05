@@ -46,9 +46,14 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
-App::error(function(Exception $exception, $code)
+App::missing(function($exception)
 {
-	Log::error($exception);
+	return Response::view('errors.404', array(), 404);
+});
+App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $exception)
+{
+    // do whatever here. 404, flash message, etc.
+    return Redirect::home();
 });
 
 /*

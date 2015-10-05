@@ -30,7 +30,6 @@ Route::resource('events', 'CalendarEventsController');
 
 //routes made for front-end purposes
 Route::get('/', 'HomeController@showHome');
-Route::get('/404', 'HomeController@error');
 Route::get('/you_are_not_alone', 'HomeController@index');
 Route::get('/tutorials', 'HomeController@tutorials');
 
