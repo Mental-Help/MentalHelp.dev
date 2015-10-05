@@ -225,6 +225,12 @@ footer {
   background-color: #00008B;
   border-color: #00008B; }
 
+.visitor-add-btn {
+  float: right;
+  position: absolute;
+  right: 10%;
+  top: 12%; }
+
 /*
     Thumbelina Content Slider
     V1.0 Rev 1302190900
