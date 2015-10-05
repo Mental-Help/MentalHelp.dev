@@ -2,16 +2,26 @@
 
 @section('content')
     <div class="container">
-        <h1>{{ $profile->user->username }}</h1>
+        <h1>
+            @if (isset($profile->user->first_name) && isset($profile->user->last_name))
+                {{{ $profile->user->first_name }}} {{{ $profile->user->last_name }}}
+            @elseif (isset($profile->user->username))
+                {{{ $profile->user->username }}}
+            @else
+                Anonymous
+            @endif
+        </h1>
         <hr>
 
         <div class="col-md-4">
             <img class="img-circle" src="{{ $profile->image_url }}" alt="Generic placeholder image" width="300" height="300">
-            <p><a href="{{ $profile->facebook_url }}">Facebook</a></p>
+            <div class="social-media-links">
+                <p><i class="fa fa-facebook-square"></i><a href="{{ $profile->facebook_url }}">Facebook</a></p>
 
-            <p><a href="{{ $profile->twitter_url}}">Twitter</a></p>
+                <p><i class="fa fa-twitter-square"></i><a href="{{ $profile->twitter_url}}">Twitter</a></p>
 
-            <p><a href="{{$profile->instagram_url}}">Instagram</a></p>
+                <p><i class="fa fa-instagram"></i><a href="{{$profile->instagram_url}}">Instagram</a></p>
+            </div>
 
             {{-- <p>Illnesses</p> --}}
         </div>

@@ -6,7 +6,7 @@
 	border-radius: 4px;
 	padding: 10px;
 	margin: 10px 0;
-	height: auto;
+	height: 250px;
 }
 
 .story-btn {
@@ -21,6 +21,18 @@
 .delete-btn {
 	background-image: linear-gradient(to bottom,#FF8181 0,#f00 100%);
 	border-color: #fff;
+}
 
-	
+.social-media-links {
+	width: 300px;
+	text-align: center;
+	margin: 10px 0;
+
+	a{
+		color: $dark-blue;
+	}
+
+	i {
+		margin: 0 5px;
+	}
 }
