@@ -2,9 +2,9 @@
 @section('content')
 	<div class="container">
 		<h1>{{ $event->title }}</h1>
-		{{-- @if (Auth::check()) --}}
+		@if (Auth::check())
 			<button class="btn btn-default rsvp">RSVP</button>
-		{{-- @endif --}}
+		@endif
 		<hr>
 		<div class="col-md-8">
 			<p>{{ $event->start_time }} - {{ $event->end_time }}</p>

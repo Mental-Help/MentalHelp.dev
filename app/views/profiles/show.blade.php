@@ -12,8 +12,7 @@
             @endif
         </h1>
 
-        @if (Auth::check())
-
+        @if (Auth::check() && Auth::id() == $profile->user_id)
             @if(isset($profile->about_me))
                 <a href="{{ action('ProfilesController@edit') }}"><button>Edit Profile <i class="fa fa-pencil"></i></button></a>
             @else
@@ -39,20 +38,11 @@
             <p>{{ $profile->about_me }}</p>
             <div class="stories-div">
                 <h2>Stories:</h2>
-                <div>
-                    @if (Auth::check())
-                        <button class="btn btn-default" data-toggle="modal" data-target="#addStoryModal" data-dismiss="modal">Add Story <i class="fa fa-plus-circle"></i></button>
-                    @endif
-                </div>
                 @foreach($profile->userStories as $story)
                     <div class="individual-story well">
                         <h3>{{ $story->title }}</h3>
                         <p><small class="slider-time">Date Created: {{ $story->created_at }}</small></p>
                         <p>{{ $story->body }}</p>
-                        @if (Auth::check())
-                            <button class="btn btn-primary story-btn edit-btn">Edit <i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger story-btn delete-btn">Delete <i class="fa fa-trash-o"></i></button>
-                        @endif
                     </div>
                 @endforeach
             </div>

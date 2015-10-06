@@ -17,9 +17,9 @@
 			Date Created: {{{ $story->created_at }}}</small><br>
 			<p>{{{ $story->body }}}</p>
 
-			@if (Auth::check())
+			@if (Auth::check() && Auth::id() == $story->user_id)
 				<a href="{{{ action('UserStoriesController@edit', $story->id) }}}">Edit</a>
-				<button id="deleteBtn">Delete</button>
+				<a href="{{{ action('UserStoriesController@delete')}}}"><button id="deleteBtn">Delete</button></a>
 
 				{{ Form::open(array('action' => array('UserStoriesController@destroy', $story->id), 'method' => 'DELETE', 'id' => 'formDelete')) }}
 				{{ Form::close() }}
