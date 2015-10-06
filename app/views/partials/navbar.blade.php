@@ -28,10 +28,16 @@
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{{Auth::user()->first_name}}} </a>
+                        <a href="#" class="dropdown-toggle signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{ Auth::user()->first_name }}</a>
                         <ul class="dropdown-menu">
-                            <li><a class="login-dropdown" href="{{ action('ProfilesController@show') }}">My Profile</a></li>
-                            <li><a class="login-dropdown" href="{{ action('ProfilesController@edit') }}">Edit My Profile</a></li>
+                            @if(isset($currentUser->profile->about_me))
+                                <li><a class="login-dropdown" href="{{ action('ProfilesController@show', $currentUser->profile->id) }}">My Profile</a></li>
+                            @endif
+                            @if(isset($currentUser->profile->about_me))
+                                <li><a class="login-dropdown" href="{{ action('ProfilesController@edit', $currentUser->profile->id) }}">Edit My Profile</a></li>
+                            @else
+                                <li><a class="login-dropdown" href="{{ action('ProfilesController@create') }}">Create My Profile</a></li>
+                            @endif
                             <li><a class="login-dropdown" href="{{ action('CalendarEventsController@create') }}">Create an Event</a></li>
                             <li><a class="login-dropdown" href="{{ action('UserStoriesController@create') }}">Add Story</a></li>
                             <li><a class="login-dropdown" href="{{ action('AuthController@logout') }}">Logout</a></li>
