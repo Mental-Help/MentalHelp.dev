@@ -34,5 +34,4 @@ class ProfilesTableSeeder extends Seeder {
 			$profile->save();
 		}
 	}
-
 }

@@ -8,7 +8,7 @@ class CalendarEventUserTableSeeder extends Seeder {
 
 		foreach(CalendarEvent::all() as $event) {
 
-			$attendees = User::all()->random(10);
+			$attendees = User::all()->random(3);
 
 			foreach($attendees as $attendee) {
 
