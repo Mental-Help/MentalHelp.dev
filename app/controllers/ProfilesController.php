@@ -153,7 +153,7 @@ class ProfilesController extends BaseController {
 					$profile->public_email	   = Input::get('public_email');
 					if (Input::hasFile('image')) {
 						$file = Input::file('image');
-						$profile->uploadImage($file);
+						$profile->image_url($file);
 					}
 					$profile->facebook_url 	   = Input::get('facebook_url');
 					$profile->twitter_url  	   = Input::get('twitter_url');
