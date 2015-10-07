@@ -27,6 +27,8 @@ class DatabaseSeeder extends Seeder {
 
 		DB::table('illnesses')->delete();
 
+		DB::table('profiles')->delete();
+
 		DB::table('permissions')->delete();
 
 		DB::table('roles')->delete();
@@ -36,6 +38,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UsersTableSeeder');
 
 		$this->call('EntrustTableSeeder');
+
+		$this->call('ProfilesTableSeeder');
 
 		$this->call('IllnessesTableSeeder');
 

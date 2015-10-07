@@ -6,11 +6,9 @@ class TagUserStoryTableSeeder extends Seeder {
 	{
 		foreach(UserStory::all() as $userStory) {
 
-			$tags = Tag::findOrFail(5);
+			$tag = Tag::findOrFail(5);
 
-			foreach($tags as $tag) {
-				$userStory->tags()->attach($tag->id);
-			}
+			$userStory->tags()->attach($tag->id);
 		}
 	}
 

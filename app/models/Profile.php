@@ -24,7 +24,7 @@ class Profile extends SoftModel {
 		'is_public'		   => 'required|boolean',
 		'can_be_contacted' => 'required|boolean',
 		'public_email'	   => 'required_if:can_be_contacted,true|email|max:255|unique:profiles',
-		'image_url'		   => 'max:255|unique:profiles',
+		'image_url'		   => 'max:255',
 		'facebook_url'	   => 'url|max:255|unique:profiles',
 		'twitter_url'	   => 'url|max:255|unique:profiles',
 		'instagram_url'	   => 'url|max:255|unique:profiles',

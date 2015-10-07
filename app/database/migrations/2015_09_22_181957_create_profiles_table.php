@@ -23,7 +23,7 @@ class CreateProfilesTable extends Migration {
 			$table->boolean('can_be_contacted');
 			$table->string('public_email')->nullable()->unique();
 
-			$table->string('image_url')->unique();
+			$table->string('image_url');
 			$table->string('facebook_url')->nullable()->unique();
 			$table->string('twitter_url')->nullable()->unique();
 			$table->string('instagram_url')->nullable()->unique();
