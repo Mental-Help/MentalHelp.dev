@@ -114,9 +114,9 @@ class EntrustTableSeeder extends Seeder {
 			$createDigitalGroups
 		));
 
-		$user = User::where('username', '=', 'Harkonnen')->first();
-		$user->attachRole($admin);
-		$user->attachRole($user);
+		$firstuser = User::where('username', '=', 'Harkonnen')->first();
+		$firstuser->attachRole($admin);
+		$firstuser->attachRole($user);
 
 		$seconduser = User::where('username', '=', 'Alex')->first();
 		$seconduser->attachRole($admin);
@@ -124,7 +124,7 @@ class EntrustTableSeeder extends Seeder {
 
 		$seconduser = User::where('username', '=', 'Meghan')->first();
 		$seconduser->attachRole($admin);
-		$seconduser->attachRole($advocate);
+		$seconduser->attachRole($caregiver);
 
 	}
 
