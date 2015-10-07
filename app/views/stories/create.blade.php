@@ -11,7 +11,7 @@
 		            {{Form::textarea('body', null, ['class' => 'form-control', 'data-provide' => 'markdown', 'rows' => '10', 'placeholder' => 'Content Here'])}}
 		        {{ Form::close() }}
 		    </div>
-		    {{ Form::submit('Save', ['class' => 'btn btn-default save-btn']) }}
+		    {{ Form::submit('Save', ['class' => 'btn btn-default save-btn story-save']) }}
 
 		{{ Form::close() }}
 	</div>

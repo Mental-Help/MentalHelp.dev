@@ -7,6 +7,17 @@
             <h3 align="center">Sign Up</h3>
             {{ Form::open(array('action' => 'AuthController@store')) }}
                 <div class="row">
+                    <div class="dropdown form-group col-md-6">
+                        {{Form::label('role', 'Role')}}
+                        <small>Need to <a href="/">learn more?</a></small>
+                        {{ Form::select('role', ['M' => 'Storyteller', 'C' => 'Advocate'], null, ['class' => 'form-control dropdown-toggle btn btn-default form-dropdown'])}}
+                    </div>
+                    <div class="form-group col-md-6">
+                        {{Form::label('remain_anonymous', 'Would you like to remain anonymous?')}}
+                        {{ Form::select('remain_anonymous', ['1' => 'Yes, I would like to remain anonymous', '0' => 'No, I would like to share my experiences'], null, ['class' => 'form-control dropdown-toggle btn btn-default form-dropdown'])}}
+                    </div>
+                </div>
+                <div class="row">
                     <div class="form-group col-md-6">
                         {{Form::label('first_name', 'First Name')}}
                         {{Form::text('first_name', null, ['class' => 'form-control', 'placeholder' => 'First Name'])}}
@@ -35,16 +46,6 @@
                     <div class="form-group col-md-6">
                         {{Form::label('password', 'Password Confirm')}}
                         {{Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'Password Confirm'])}}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dropdown form-group col-md-6">
-                        {{Form::label('role', 'Role')}}
-                        {{ Form::select('role', ['M' => 'Storyteller', 'C' => 'Advocate'], null, ['class' => 'form-control dropdown-toggle btn btn-default form-dropdown'])}}
-                    </div>
-                    <div class="form-group col-md-6">
-                        {{Form::label('remain_anonymous', 'Would you like to remain anonymous?')}}
-                        {{ Form::select('remain_anonymous', ['1' => 'Yes I would like to remain anonymous', '0' => 'No I would like to share my experiences'], null, ['class' => 'form-control dropdown-toggle btn btn-default form-dropdown'])}}
                     </div>
                 </div>
                 <div class="login-redirect">
