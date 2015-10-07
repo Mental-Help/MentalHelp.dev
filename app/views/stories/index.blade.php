@@ -3,6 +3,7 @@
 @section('content')
 	<div class="container">
 		<h1 class="index-heading">All Stories</h1>
+		
 		@if (Auth::check())
             <a href="{{ action('UserStoriesController@create') }}"><button class="btn btn-default visitor-add-btn">Write Your Story <i class="fa fa-pencil"></i></button></a>
         @else
