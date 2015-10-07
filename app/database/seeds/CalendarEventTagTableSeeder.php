@@ -5,16 +5,11 @@ class CalendarEventTagTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$tags = [];
-
 		foreach(CalendarEvent::all() as $event) {
+			$tag = Tag::findOrFail(5);
 
-			$tags = Tag::all()->random(2);
-
-			foreach($tags as $tag) {
-				$event->tags()->attach($tag->id);
-				$event->timestamps = false;
-			}
+			$event->tags()->attach($tag->id);
+			$event->timestamps = false;
 		}
 	}
 

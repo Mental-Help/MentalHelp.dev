@@ -13,8 +13,6 @@ class DatabaseSeeder extends Seeder {
 
 		DB::table('illness_data')->delete();
 
-		DB::table('calendar_event_user')->delete();
-
 		DB::table('calendar_event_tag')->delete();
 
 		DB::table('calendar_events')->delete();
@@ -29,8 +27,6 @@ class DatabaseSeeder extends Seeder {
 
 		DB::table('illnesses')->delete();
 
-		DB::table('profiles')->delete();
-
 		DB::table('permissions')->delete();
 
 		DB::table('roles')->delete();
@@ -40,8 +36,6 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UsersTableSeeder');
 
 		$this->call('EntrustTableSeeder');
-
-		$this->call('ProfilesTableSeeder');
 
 		$this->call('IllnessesTableSeeder');
 
@@ -56,8 +50,6 @@ class DatabaseSeeder extends Seeder {
 		$this->call('CalendarEventsTableSeeder');
 
 		$this->call('CalendarEventTagTableSeeder');
-
-		$this->call('CalendarEventUserTableSeeder');
 
 		$this->call('IllnessDataTableSeeder');
 	}
