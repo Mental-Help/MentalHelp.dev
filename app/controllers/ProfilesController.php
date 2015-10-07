@@ -145,7 +145,7 @@ class ProfilesController extends BaseController {
 	public function validateAndSave($profile)
 	{
 		try {
-			if($profile->user()->remain_anonymous == false){
+			if($profile->user->remain_anonymous == false){
 				if(Input::get('is_public') == true) {
 					$profile->is_public 	   = Input::get('is_public');
 					$profile->about_me		   = Input::get('about_me');
